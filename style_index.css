@@ -21,8 +21,8 @@ body {
 
 .snow {
     position: absolute;
-    width: 5px;
-    height: 5px;
+    width: 3px;
+    height: 3px;
     background: white;
     border-radius: 50%;
     box-shadow: 0 0 5px 5px white;

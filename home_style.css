@@ -203,7 +203,7 @@ h1 {
     color: white;
   }
 
-.imtext{    
+.imtext {    
     font-family: "Pretendard";
     position: absolute;
     justify-content: center;
@@ -227,3 +227,19 @@ h1 {
 
 }
 
+
+.side-bar__icon-box1:hover .my_img{
+    display: block;
+}
+
+.side-bar__icon-box2:hover .my_img{
+    display: block;
+}
+
+.side-bar__icon-box3:hover .my_img{
+    display: block;
+}
+
+.side-bar__icon-box4:hover .my_img{
+    display: block;
+}

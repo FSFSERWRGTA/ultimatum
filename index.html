@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<!-- html lang="ko": 언어 지정 가능.-->
+<head>
+	<title>ultimatum</title><!-- 웹 브라우저에 표시하는 제목 지정 -->
+    <link rel="stylesheet" href="style_index.css">
+</head>
+<body>
+    <div class="center">
+        <img src="img/logo.png">
+    </div>
+    <script>
+        for (let i = 0; i < 200; i++) {
+        const snow = document.createElement("div");
+        snow.className = "snow";
+        snow.style.opacity = Math.random();
+
+        const startX = Math.random() * 100;
+        const endX = startX + (Math.random() * 20 - 10);
+        const scale = Math.max(Math.random(), 0.5);
+
+        const keyframe = [
+            { transform: `translate(${startX}vw, 0) scale(${scale})` },
+            { transform: `translate(${endX}vw, 100vh) scale(${scale})` },
+        ];
+        const option = {
+            duration: 15000,
+            easing: "linear",
+            iterations: Infinity,
+            delay: -Math.random() * 20 * 1000,
+        };
+        snow.animate(keyframe, option);
+
+        document.body.appendChild(snow);
+        }
+    </script>
+</body>
+<html>

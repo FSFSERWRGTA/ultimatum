@@ -1,38 +1,85 @@
 <!DOCTYPE html>
-<html>
-<!-- html lang="ko": 언어 지정 가능.-->
+<html lang="ko">
 <head>
-	<title>ultimatum</title><!-- 웹 브라우저에 표시하는 제목 지정 -->
+    <title>ultimatum</title>
     <link rel="stylesheet" href="style_index.css">
+    <style>
+        .snow {
+            position: absolute;
+            width: 6px; /* 눈송이 너비 */
+            height: 6px; /* 눈송이 높이 */
+            background: white;
+            border-radius: 50%;
+            box-shadow: 0 0 5px 5px white;
+        }
+    </style>
 </head>
 <body>
     <div class="center">
         <img src="img/logo.png" alt="logo">
-    </div>    
+    </div>
     <script>
         for (let i = 0; i < 200; i++) {
-        const snow = document.createElement("div");
-        snow.className = "snow";
-        snow.style.opacity = Math.random();
+            const snow = document.createElement("div");
+            snow.className = "snow";
+            snow.style.opacity = Math.random();
 
-        const startX = Math.random() * 100;
-        const endX = startX + (Math.random() * 20 - 10);
-        const scale = Math.max(Math.random(), 0.5);
+            // 화면 안에서 시작
+            const startX = Math.random() * 100; // 0 ~ 100vw 범위
+            const endX = startX - 50; // 왼쪽으로 떨어짐
+            const startY = 0; // Y좌표는 0으로 고정
 
-        const keyframe = [
-            { transform: `translate(${startX}vw, 0) scale(${scale})` },
-            { transform: `translate(${endX}vw, 100vh) scale(${scale})` },
-        ];
-        const option = {
-            duration: 15000,
-            easing: "linear",
-            iterations: Infinity,
-            delay: -Math.random() * 20 * 1000,
-        };
-        snow.animate(keyframe, option);
+            const scale = Math.max(Math.random(), 0.1); // 무작위 크기
 
-        document.body.appendChild(snow);
+            const keyframe = [
+                { transform: `translate(${startX}vw, ${startY}vh) scale(${scale})` }, // 시작
+                { transform: `translate(${endX}vw, 100vh) scale(${scale})` }, // 끝
+            ];
+
+            // 눈송이의 속도를 랜덤하게 설정 (최소 5초, 최대 15초)
+            const duration = Math.random() * 10000 + 5000; // 5000ms에서 15000ms 사이
+
+            const option = {
+                duration: duration,
+                easing: "linear",
+                iterations: Infinity,
+                delay: -Math.random() * 20000, // 무작위 지연 시간
+            };
+
+            snow.animate(keyframe, option);
+            document.body.appendChild(snow);
+        }
+
+        for (let i = 0; i < 200; i++) {
+            const snow = document.createElement("div");
+            snow.className = "snow";
+            snow.style.opacity = Math.random();
+
+            // 화면 오른쪽 바깥에서 시작
+            const startX = 110 + Math.random() * 50; // 100vw ~ 150vw 범위
+            const endX = startX - 50; // 왼쪽으로 떨어짐
+            const startY = Math.random() * -100; // 위에서 시작
+
+            const scale = Math.max(Math.random(), 0.1); // 무작위 크기
+
+            const keyframe = [
+                { transform: `translate(${startX}vw, ${startY}vh) scale(${scale})` }, // 랜덤한 Y좌표에서 시작
+                { transform: `translate(${endX}vw, 100vh) scale(${scale})` }, // 화면 아래로 떨어짐
+            ];
+
+            // 눈송이의 속도를 랜덤하게 설정 (최소 5초, 최대 15초)
+            const duration = Math.random() * 10000 + 5000; // 5000ms에서 15000ms 사이
+
+            const option = {
+                duration: duration,
+                easing: "linear",
+                iterations: Infinity,
+                delay: -Math.random() * 20000, // 무작위 지연 시간
+            };
+
+            snow.animate(keyframe, option);
+            document.body.appendChild(snow);
         }
     </script>
 </body>
-<html>
+</html>

@@ -203,7 +203,7 @@ h1 {
     color: white;
   }
 
-.imtext {    
+.imtext{    
     font-family: "Pretendard";
     position: absolute;
     justify-content: center;
@@ -216,30 +216,14 @@ h1 {
     font-weight:bold;
 }
 
-.main-bar__icon-box :hover{
-    position: relative;
-    width: 120px; /* 원하는 가로 크기 */
-    height: 50px; /* 원하는 세로 크기 */
-    border-radius: 20px; /* 모서리를 둥글게 */
+.main-bar__icon-box2 :hover .imtext {
+    color: #9DB1CB; /* 마우스 오버 시 텍스트 색상 변경 */
+}
+
+.main-bar__icon-box2 :hover{
     background: #475C79;
     color: #9DB1CB;
     text-decoration: none; /* 하이퍼링크 밑줄 제거 */
 
 }
 
-
-.side-bar__icon-box1:hover .my_img{
-    display: block;
-}
-
-.side-bar__icon-box2:hover .my_img{
-    display: block;
-}
-
-.side-bar__icon-box3:hover .my_img{
-    display: block;
-}
-
-.side-bar__icon-box4:hover .my_img{
-    display: block;
-}

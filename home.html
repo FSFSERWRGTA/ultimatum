@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>ultimatum</title>
+    <link rel="stylesheet" href="home_style.css">
+    <!-- Vue.js CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
+</head>
+<body>
+
+    <aside class="side-bar">
+        <div>
+            <a href="#"><img src="img/main/logo_main.png" alt="logo"></a>
+        </div>
+        <section class="side-bar__icon-box">
+            <div class="side-bar__icon-box1">
+                <a href="#"><img src="img/main/notice.png" alt="notice"></a>
+                <img class="my_img" src="img/main/undershine.png" alt="notice highlight">
+            </div>
+            <div class="side-bar__icon-box2">
+                <a href="#"><img src="img/main/word.png" alt="word"></a>
+                <img class="my_img" src="img/main/undershine.png" alt="word highlight">
+            </div>
+            <div class="side-bar__icon-box3">
+                <a href="#"><img src="img/main/system.png" alt="system"></a>
+                <img class="my_img" src="img/main/undershine.png" alt="system highlight">
+            </div>
+            <div class="side-bar__icon-box4">
+                <a href="#"><img src="img/main/member.png" alt="member"></a>
+                <img class="my_img" src="img/main/undershine.png" alt="member highlight">
+            </div>
+        </section>
+    </aside>
+    
+    </aside>
+
+    <main>
+        <!-- 별 -->
+        <div>
+            <div>
+                <img src="img/main/star.png" alt="star" style="max-width: 30%; height: auto;">
+            </div>
+            
+        </div>     
+        <!-- 카운트다운 -->
+        <div class="container">
+            <div class="days-c">
+                <p class="timer" id="day">0</p>
+            </div>
+            <p class="timer" >:</p>
+            <div class="hours-c">
+                <p class="timer" id="hours">0</p>
+            </div>
+            <p class="timer" >:</p>
+    
+            <div class="mins-c">
+                <p class="timer" id="mins">0</p>
+            </div>
+            <p class="timer" >:</p>
+    
+            <div class="seconds-c">
+                <p class="timer" id="seconds">0</p>
+            </div>
+        </div>
+        <!-- 간지대사 -->
+        <div class="last">
+            <div class ="text">
+                <p>멸망을 향하는 행성이 최후의 구원을 기다리는 중입니다. </p>
+            </div>
+            <div class ="img">
+                <img src="img/main/timerhightlight.png" alt="undershine">
+            </div>
+            
+        </div>
+
+        <!-- 청서양식 등 -->
+        <div class="">
+            <section class="main-bar__icon-box">
+                <div class="main-bar__icon-box2">
+                    <a href="#"><div class="rectangle-icon"><span class="imtext">신청서 양식</span></div></a>
+                </div>
+                
+                <div class="main-bar__icon-box2">
+                    <a href="#"><div class="rectangle-icon"><span class="imtext">질의응답</span></div></a>
+                </div>
+                <div class="main-bar__icon-box2">
+                    <a href="#"><div class="rectangle-icon"><span class="imtext">일정표</span></div></a>
+                </div>
+                <div class="main-bar__icon-box2">
+                    <a href="#"><div class="rectangle-icon"><span class="imtext">접수현황</span></div></a>
+                </div>
+            </section>
+            
+
+        </div>
+        
+
+    </main>
+
+    <aside class="side-bar2">
+        <div>
+            <img src="img/main/stars.png" alt="logo2" style="max-width: 15%; height: auto; margin-top: 80px;">
+        </div>
+    </aside>
+
+
+    <script>
+        // Vue 인스턴스 생성
+        const dayEl = document.getElementById('day')
+        const hoursEl = document.getElementById('hours')
+        const minsEl = document.getElementById('mins')
+        const secondsEl = document.getElementById('seconds')
+
+        function countDown(){
+            const newYear = new Date(2024, 12, 25)
+            const current = new Date()
+
+            const diffTime = Math.abs(newYear-current)
+
+            const days = Math.floor( diffTime/(1000*3600*24) )
+            const hours = Math.floor( diffTime/(1000*3600) %24)
+            const mins = Math.floor( diffTime/(1000*60) %60)
+            const seconds = Math.floor( diffTime/(1000) %60)
+
+            dayEl.innerHTML = formatTime(days)
+            hoursEl.innerHTML = formatTime(hours)
+            minsEl.innerHTML = formatTime(mins)
+            secondsEl.innerHTML = formatTime(seconds)
+        }
+        function formatTime(time){
+            return time < 10 ? (`0${time}`) : (time);
+        }
+        countDown()
+
+        setInterval(countDown, 1000)
+    </script>
+
+</body>
+</html>

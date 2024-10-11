@@ -8,7 +8,7 @@
 	font-family: 'Pretendard';
 	font-weight: 900;
 	font-display: swap;
-	src: local('Pretendard Black'), url(../woff2/Pretendard-Black.woff2) format('woff2'), url(./woff/Pretendard-Black.woff) format('woff');
+	src: local('Pretendard Light'), url(../../woff2/Pretendard-Light.woff2) format('woff2'), url(../../woff2/Pretendard-Light.woff) format('woff');
 }
 body {
     margin: 0;
@@ -98,13 +98,13 @@ body {
 }
 
 .krname {
-    font-family: "SUIT";
+    font-family: "Pretendard";
     font-size: 20px; /* 텍스트 크기 */
     margin-top: 0px; /* 위간격만 적용 */
 }
 
 .info {
-    font-family: "SUIT";
+    font-family: 'Pretendard';
     font-size: 20px; /* 텍스트 크기 */
     margin-top: 30px; /* 위간격만 적용 */
     line-height:70px;
@@ -118,21 +118,21 @@ body {
 }
 
 .look {
-    font-family: "SUIT";
+    font-family: 'Pretendard';
     font-size: 20px; /* 텍스트 크기 */
     margin-top: 70px; /* 위간격만 적용 */
     text-align: justify;
 }
 
 .personality{
-    font-family: "SUIT";
+    font-family: 'Pretendard';
     font-size: 20px; /* 텍스트 크기 */
     margin-top: 70px; /* 위간격만 적용 */
     text-align: justify;
 }
 
 .ect{
-    font-family: "SUIT";
+    font-family: 'Pretendard';
     font-size: 20px; /* 텍스트 크기 */
     margin-top: 70px; /* 위간격만 적용 */
     text-align: justify;

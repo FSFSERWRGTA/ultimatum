@@ -43,6 +43,7 @@ body {
 
 .side-bar__icon-box img.my_img {
     padding-top: 60px;
+    z-index: -1;
     display: none; /* 기본적으로 이미지 숨김 */
     position: absolute; /* 절대 위치 설정으로 부모 요소 안에서 위치 */
     top: 0; /* 상단 위치 */
@@ -64,7 +65,7 @@ main {
     margin-right: auto; /* 오른쪽 여백 자동 */
 }
 
-
+/*왼쪽 사이드바 */
 .side-bar {
     grid-area: sidebar; /* 사이드바 영역 지정 */
     float:left;
@@ -80,19 +81,33 @@ main {
     width: 30%; /* 최소 너비: 60% */
 }
 
+/* 오른쪽 사이드바*/
 .side-bar2 {
-    float: right; /* 오른쪽으로 플로팅 */
     position: fixed; /* 고정 위치 */
     z-index: 1; /* 다른 요소 위에 표시 */
     top: 0; /* 상단에 고정 */
     right: 0; /* 오른쪽에 고정 */
     overflow-x: hidden; /* 수평 스크롤 숨기기 */
-    padding-right: 5%; /* 오른쪽 패딩 */
-    padding-top: 120px; /* 상단 패딩 */
+    padding-right: 10%; /* 오른쪽 패딩 */
+    width: 20%; /* 너비: 20% */
     min-height: 100vh; /* 최소 높이: 전체 화면 */
+    display: flex; /* 플렉스박스 설정 */
+    flex-direction: column; /* 세로로 나열 */
+    justify-content: center; /* 세로 중앙 정렬 */
     text-align: center; /* 텍스트 가운데 정렬 */
-    width: 20%; /* 너비: 30% */
 }
+
+.side-bar2 img {
+    max-width: 20%; /* 이미지 너비 조정 */
+    padding: 40px;
+    height: auto;
+    justify-content: space-between;
+}
+
+.side-bar2 img:first-child {
+    margin-top: 0; /* 첫 번째 이미지는 간격 제거 */
+}
+
 
 body {
     margin: 0;
@@ -176,7 +191,7 @@ h1 {
     justify-content: space-between; /* 아이콘들 사이의 간격을 균등하게 배치 */
     align-items: center; /* 세로 가운데 정렬 */
     width: 100%;
-    margin-top: 30px;
+    margin-top: 60px;
 
 }
 
@@ -184,7 +199,7 @@ h1 {
 .rectangle-icon {
     position: relative;
     width: 120px; /* 원하는 가로 크기 */
-    height: 50px; /* 원하는 세로 크기 */
+    height: 45px; /* 원하는 세로 크기 */
     border-radius: 20px; /* 모서리를 둥글게 */
     background: #9DB1CB;
     color: #9DB1CB;

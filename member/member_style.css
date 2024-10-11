@@ -71,6 +71,7 @@ main {
     width: 100%; /* 너비를 부모 요소에 맞춤 */
     gap: 25px; /* 아이콘 간의 간격 조정 (필요시) */
     padding: 20px;
+    margin-left: -62.7px;
 }
 
 
@@ -79,8 +80,6 @@ main {
     position: relative;
     width: 187px; /* 원하는 가로 크기 */
     height: 339px; /* 원하는 세로 크기 */
-    background: white;
-    color: #9DB1CB;
     text-align: center;
     text-indent: 0.1em;
     
@@ -160,8 +159,8 @@ main {
 }
 
 .side-bar2 img {
-    max-width: 22%; /* 이미지 너비 조정 */
-    margin: 80px;
+    max-width: 26%; /* 이미지 너비 조정 */
+    margin: 50px;
     height: auto;
     justify-content: space-between;
 }

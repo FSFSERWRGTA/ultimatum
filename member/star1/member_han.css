@@ -10,6 +10,14 @@
 	font-display: swap;
 	src: local('Pretendard Light'), url(../../woff2/Pretendard-Light.woff2) format('woff2'), url(../../woff2/Pretendard-Light.woff) format('woff');
 }
+
+@font-face {
+    font-family: 'Chosunilbo_myungjo';
+    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_one@1.0/Chosunilbo_myungjo.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
 body {
     margin: 0;
     padding: 0;
@@ -39,11 +47,11 @@ body {
 .side-bar2 {
     float: left;
     position: fixed; /* 고정 위치 */
-    z-index: 1; /* 다른 요소 위에 표시 */
+    z-index: 40; /* 다른 요소 위에 표시 */
     top: 0; /* 상단에 고정 */
     left: 0; /* 오른쪽에 고정 */
     overflow-x: hidden; /* 수평 스크롤 숨기기 */
-    width: 20%; /* 너비: 20% */
+    width: 12%; /* 너비: 20% */
     min-height: 100vh; /* 최소 높이: 전체 화면 */
     display: flex; /* 플렉스박스 설정 */
     flex-direction: column; /* 세로로 나열 */
@@ -51,11 +59,13 @@ body {
 }
 
 .side-bar2 img {
-    max-width: 26%; /* 이미지 너비 조정 */
+    max-width: 20%; /* 이미지 너비 조정 */
     padding-top: 50px;
+    margin-left: 17px;
     height: auto;
     justify-content: space-between;
 }
+
 .full {
     z-index: 4; 
     height: 100vh;
@@ -70,8 +80,9 @@ body {
 }
 
 .square01 {
+    z-index: 10;
     position: relative;
-    width: 55%;
+    width: 45%;
     height: 100vh; /* 화면 전체 높이를 차지 */
     background-color: #333435;
     background: linear-gradient(#333435, black);
@@ -90,21 +101,29 @@ body {
 }
 
 /* 각 텍스트에 대한 스타일 */
-.enname {
-    font-family: "SUIT";
-    font-size: 70px; /* 텍스트 크기 */
-    margin-top: 150px; /* 위간격만 적용 */
-    line-height:0%;
+
+.catch{
+    font-family: "Pretendard";
+    font-size: 20px; /* 텍스트 크기 */
+    margin-top: 360%; /* 위간격만 적용 */
+    line-height: 0;
 }
 
 .krname {
+    font-family: "SUIT";
+    font-size: 360%; /* 텍스트 크기 */
+    margin-top: 150px; /* 위간격만 적용 */
+    line-height: 0;
+}
+
+.enname {
     font-family: "Pretendard";
     font-size: 20px; /* 텍스트 크기 */
-    margin-top: 0px; /* 위간격만 적용 */
+    margin-top: 10px; /* 위간격만 적용 */
 }
 
 .info {
-    font-family: 'Pretendard';
+    font-family: 'Chosunilbo_myungjo';
     font-size: 20px; /* 텍스트 크기 */
     margin-top: 30px; /* 위간격만 적용 */
     line-height:70px;
@@ -118,22 +137,25 @@ body {
 }
 
 .look {
-    font-family: 'Pretendard';
-    font-size: 20px; /* 텍스트 크기 */
+    font-family: 'Chosunilbo_myungjo';
+    font-size: 15px; /* 텍스트 크기 */
     margin-top: 70px; /* 위간격만 적용 */
     text-align: justify;
+    line-height: 30px;
 }
 
 .personality{
-    font-family: 'Pretendard';
-    font-size: 20px; /* 텍스트 크기 */
+    font-family: 'Chosunilbo_myungjo';
+    font-size: 15px; /* 텍스트 크기 */
+    line-height: 30px;
     margin-top: 70px; /* 위간격만 적용 */
     text-align: justify;
 }
 
 .ect{
-    font-family: 'Pretendard';
-    font-size: 20px; /* 텍스트 크기 */
+    font-family: 'Chosunilbo_myungjo';
+    font-size: 15px; /* 텍스트 크기 */
+    line-height: 30px;
     margin-top: 70px; /* 위간격만 적용 */
     text-align: justify;
 }

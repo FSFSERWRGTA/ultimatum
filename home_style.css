@@ -72,6 +72,9 @@ main {
 
 /*왼쪽 사이드바 */
 .side-bar {
+    position: relative;
+    width: 45%;
+    height: 100vh; /* 화면 전체 높이를 차지 */
     grid-area: sidebar; /* 사이드바 영역 지정 */
     float:left;
     position: fixed;
@@ -99,14 +102,13 @@ main {
     min-height: 100vh; /* 최소 높이: 전체 화면 */
     display: flex; /* 플렉스박스 설정 */
     flex-direction: column; /* 세로로 나열 */
-    justify-content: center; /* 세로 중앙 정렬 */
     text-align: center; /* 텍스트 가운데 정렬 */
-    padding-top: 50px;
+    padding-top: 15%;
 }
 
 .side-bar2 img {
-    max-width: 26%; /* 이미지 너비 조정 */
-    margin: 50px;
+    max-width: 20%; /* 이미지 너비 조정 */
+    margin: 20px;
     height: auto;
     justify-content: space-between;
 }

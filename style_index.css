@@ -18,6 +18,20 @@ body {
     z-index: 1; /* 배경보다 위에 위치하도록 설정 */
 }
 
+.center a{
+    animation: fadeout 3s;
+}
+
+@keyframes fadeout {
+/* 효과를 동작시간 동안 0 ~ 1까지 */
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+    }
+}
+
 
 .snow {
     position: absolute;

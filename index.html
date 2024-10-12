@@ -82,6 +82,12 @@
             snow.animate(keyframe, option);
             document.body.appendChild(snow);
         }
+        
+        $(".ico_btn_board").click(function(){
+            $(".info_txt").removeClass("hidden_info");
+            
+            $(".info_txt").toggleClass("appear_info disappear_info");
+        });
     </script>
 </body>
 </html>

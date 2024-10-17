@@ -1,0 +1,232 @@
+body.theme-default.layout-single-column {
+    --bg-image: url("https://raw.githubusercontent.com/FSFSERWRGTA/ultimatum/main/mastodon/bg_light.png");
+    --logo: url("https://raw.githubusercontent.com/FSFSERWRGTA/ultimatum/main/mastodon/logo_light.png");
+    --m-logo: url("https://raw.githubusercontent.com/FSFSERWRGTA/ultimatum/main/mastodon/logo_light.png");
+}
+
+.layout-single-column .search__input, .layout-single-column input.setting-text {
+    background-color: #DFDFED;
+    border-color: #7C7CAD;
+    color: #7C7CAD;
+}
+
+.compose-form__highlightable{
+    background-color: #DFDFED;
+}
+
+body.theme-default.layout-single-column {
+    --color-bg-compose-form: #DFDFED;
+    --color-mud: #DFDFED;
+    --color-dim: #7C7CAD;
+}
+
+.drawer__inner__mastodon {
+    background-image: url("https://github.com/FSFSERWRGTA/ultimatum/blob/main/mastodon/logo_light.png");
+    background-size: contain;
+    background-color: #0f2a54;
+    
+  }
+  
+  .drawer__inner__mastodon img {
+    display: none;
+  }
+
+  .ui, .landing-page, .public-layout {
+    background-image: url("https://github.com/FSFSERWRGTA/ultimatum/blob/main/mastodon/bg_light.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+.account__header .account__header__fields dd,
+.public-account-bio .account__header__fields dd,
+.drawer__inner, .drawer__inner__mastodon {
+  background-color: #DFDFED;
+}
+
+.layout-single-column .compose-form__publish-button-wrapper button, .layout-single-column .report-dialog-modal__actions .button:hover, .layout-single-column .server-banner .button, .layout-single-column .sign-in-banner .button, .layout-single-column .ui__header__links .button{
+    background-color: #4F51A0;
+    border-color: #4F51A0;
+    color: #DFDFED;
+}
+
+.account__header__bio .account__header__fields dd, .layout-single-column .account__header__bio .account__header__fields dt, .layout-single-column .account__header__extra__links a, .layout-single-column .account__section-headline a, .layout-single-column .account__section-headline button, .layout-single-column .attachment-list.compact .fa, .layout-single-column .attachment-list__list a, .layout-single-column .autosuggest-textarea__suggestions, .layout-single-column .block-modal__action-bar>div, .layout-single-column .boost-modal__action-bar>div, .layout-single-column .character-counter, .layout-single-column .column-header__button, .layout-single-column .compose-form .autosuggest-account .display-name__account, .layout-single-column .compose-form .autosuggest-textarea__textarea, .layout-single-column .compose-form .autosuggest-textarea__textarea::placeholder, .layout-single-column .compose-form .compose-form__buttons-wrapper, .layout-single-column .compose-form .compose-form__modifiers, .layout-single-column .compose-form .icon-button, .layout-single-column .compose-form .spoiler-input__input, .layout-single-column .compose-form .spoiler-input__input::placeholder, .layout-single-column .compose-form__poll-wrapper .button.button-secondary, .layout-single-column .compose-panel .compose-form__autosuggest-wrapper, .layout-single-column .confirmation-modal__action-bar>div, .layout-single-column .dropdown-menu__container__header, .layout-single-column .emoji-mart, .layout-single-column .emoji-mart-anchor, .layout-single-column .emoji-mart-anchors, .layout-single-column .empty-column-indicator, .layout-single-column .follow_requests-unlocked_explanation, .layout-single-column .language-dropdown__dropdown__results__item__common-name, .layout-single-column .link-footer p, .layout-single-column .link-footer p a, .layout-single-column .mute-modal__action-bar>div, .layout-single-column .muted .poll, .layout-single-column .muted .status__content, .layout-single-column .muted .status__content a, .layout-single-column .muted .status__content p, .layout-single-column .muted .status__display-name strong, .layout-single-column .navigation-bar>a, .layout-single-column .notification .status-link.hashtag, .layout-single-column .notification .status-link.mention:not(.hashtag), .layout-single-column .notification .status-link.mention:not(.hashtag):not(.mention), .layout-single-column .notification__filter-bar a, .layout-single-column .notification__filter-bar button, .layout-single-column .notification__message .fa-home, .layout-single-column .notification__message .fa-retweet, .layout-single-column .notification__message .fa-user-plus, .layout-single-column .poll__footer, .layout-single-column .poll__link, .layout-single-column .privacy-dropdown__option:not(.active) .privacy-dropdown__option__content, .layout-single-column .reply-indicator .display-name *, .layout-single-column .report-dialog-modal .dialog-option .poll__input, .layout-single-column .report-dialog-modal .poll__option.dialog-option>.poll__option__text, .layout-single-column .report-dialog-modal__textarea::placeholder, .layout-single-column .search-popout>h4, .layout-single-column .search__icon .fa-times-circle, .layout-single-column .search__popout>h4, .layout-single-column .server-banner h4, .layout-single-column .setting-text-label, .layout-single-column .sign-in-banner p, .layout-single-column .status .status__relative-time, .layout-single-column .status .status__visibility-icon, .layout-single-column .status-card .status-card__description, .layout-single-column .status-check-box__status .detailed-status__display-name, .layout-single-column .status__display-name, .layout-single-column .status__display-name.muted, .layout-single-column .status__prepend, .layout-single-column .status__prepend .status__display-name strong, .layout-single-column .text-icon-button, .layout-single-column .timeline-hint, .layout-single-column .trends__item__current, .layout-single-column .trends__item__name {
+    color: #7C7CAD;
+}
+
+.icon-button {
+    color: #626982;
+
+}
+
+.layout-single-column .account__header__bio .account__header__fields dd, .layout-single-column .account__header__bio .account__header__fields dt, .layout-single-column .account__header__extra__links a, .layout-single-column .account__section-headline a, .layout-single-column .account__section-headline button, .layout-single-column .attachment-list.compact .fa, .layout-single-column .attachment-list__list a, .layout-single-column .autosuggest-textarea__suggestions, .layout-single-column .block-modal__action-bar>div, .layout-single-column .boost-modal__action-bar>div, .layout-single-column .character-counter, .layout-single-column .column-header__button, .layout-single-column .compose-form .autosuggest-account .display-name__account, .layout-single-column .compose-form .autosuggest-textarea__textarea, .layout-single-column .compose-form .autosuggest-textarea__textarea::placeholder, .layout-single-column .compose-form .compose-form__buttons-wrapper, .layout-single-column .compose-form .compose-form__modifiers, .layout-single-column .compose-form .icon-button, .layout-single-column .compose-form .spoiler-input__input, .layout-single-column .compose-form .spoiler-input__input::placeholder, .layout-single-column .compose-form__poll-wrapper .button.button-secondary, .layout-single-column .compose-panel .compose-form__autosuggest-wrapper, .layout-single-column .confirmation-modal__action-bar>div, .layout-single-column .dropdown-menu__container__header, .layout-single-column .emoji-mart, .layout-single-column .emoji-mart-anchor, .layout-single-column .emoji-mart-anchors, .layout-single-column .empty-column-indicator, .layout-single-column .follow_requests-unlocked_explanation, .layout-single-column .language-dropdown__dropdown__results__item__common-name, .layout-single-column .link-footer p, .layout-single-column .link-footer p a, .layout-single-column .mute-modal__action-bar>div, .layout-single-column .muted .poll, .layout-single-column .muted .status__content, .layout-single-column .muted .status__content a, .layout-single-column .muted .status__content p, .layout-single-column .muted .status__display-name strong, .layout-single-column .navigation-bar>a, .layout-single-column .notification .status-link.hashtag, .layout-single-column .notification .status-link.mention:not(.hashtag), .layout-single-column .notification .status-link.mention:not(.hashtag):not(.mention), .layout-single-column .notification__filter-bar a, .layout-single-column .notification__filter-bar button, .layout-single-column .notification__message .fa-home, .layout-single-column .notification__message .fa-retweet, .layout-single-column .notification__message .fa-user-plus, .layout-single-column .poll__footer, .layout-single-column .poll__link, .layout-single-column .privacy-dropdown__option:not(.active) .privacy-dropdown__option__content, .layout-single-column .reply-indicator .display-name *, .layout-single-column .report-dialog-modal .dialog-option .poll__input, .layout-single-column .report-dialog-modal .poll__option.dialog-option>.poll__option__text, .layout-single-column .report-dialog-modal__textarea::placeholder, .layout-single-column .search-popout>h4, .layout-single-column .search__icon .fa-times-circle, .layout-single-column .search__popout>h4, .layout-single-column .server-banner h4, .layout-single-column .setting-text-label, .layout-single-column .sign-in-banner p, .layout-single-column .status .status__relative-time, .layout-single-column .status .status__visibility-icon, .layout-single-column .status-card .status-card__description, .layout-single-column .status-check-box__status .detailed-status__display-name, .layout-single-column .status__display-name, .layout-single-column .status__display-name.muted, .layout-single-column .status__prepend, .layout-single-column .status__prepend .status__display-name strong, .layout-single-column .text-icon-button, .layout-single-column .timeline-hint, .layout-single-column .trends__item__current, .layout-single-column .trends__item__name {
+    color: #7C7CAD;
+}
+
+.dismissable-banner__message h1, .warning-banner__message h1 {
+    color: #7C7CAD;
+}
+
+.account-role {
+    border: 1px solid #7C7CAD;
+    color: #7C7CAD;
+}
+
+.icon-button {
+    color: #626982;
+}
+
+body.theme-default.layout-single-column {
+    --color-accent-dark: #626982;
+}
+
+.column-back-button {
+    color: #626982;
+}
+
+.layout-single-column .account .account__display-name, .layout-single-column .account__header__tabs__name h1 small, .layout-single-column .announcements__pagination .icon-button:hover i, .layout-single-column .column-settings__section, .layout-single-column .server-banner__introduction, .layout-single-column .server-banner__number-label, .layout-single-column .setting-toggle__label {
+    color: #626982;
+}
+
+.layout-single-column .account .account__display-name, .layout-single-column .account__header__tabs__name h1 small, .layout-single-column .announcements__pagination .icon-button:hover i, .layout-single-column .column-settings__section, .layout-single-column .server-banner__introduction, .layout-single-column .server-banner__number-label, .layout-single-column .setting-toggle__label {
+    color: #626982;
+}
+.layout-single-column .account__header__tabs__name h1 small{
+    color: #626982;
+}
+
+.column-link--transparent.active {
+    color: #626982;
+}
+
+.button {
+    background-color: #626982;
+}
+
+.account__section-headline a.active:before, .account__section-headline button.active:before, .notification__filter-bar a.active:before, .notification__filter-bar button.active:before {
+    background: #626982;
+}
+
+body.theme-bird-ui-light.layout-single-column {
+    --color-dim: #DFDFED;
+    --color-dim: #626982;
+    --color-mud: #DFDFED;
+    --color-bg-compose-form:#DFDFED;
+    
+}
+
+.layout-single-column .search__input, .layout-single-column input.setting-text {
+    background-color: #DFDFED;
+    border-color: #7C7CAD;
+    color: #7C7CAD;
+}
+
+.compose-form__highlightable{
+    background-color: #DFDFED;
+}
+
+body.theme-default.layout-single-column {
+    --color-bg-compose-form: #DFDFED;
+    --color-mud: #DFDFED;
+    --color-dim: #7C7CAD;
+}
+
+.drawer__inner__mastodon {
+    background-image: url("https://github.com/FSFSERWRGTA/ultimatum/blob/main/mastodon/logo_light.png");
+    background-size: contain;
+    background-color: #0f2a54;
+    
+  }
+  
+  .drawer__inner__mastodon img {
+    display: none;
+  }
+
+  .ui, .landing-page, .public-layout {
+    background-image: url("https://github.com/FSFSERWRGTA/ultimatum/blob/main/mastodon/bg_light.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+.account__header .account__header__fields dd,
+.public-account-bio .account__header__fields dd,
+.drawer__inner, .drawer__inner__mastodon {
+  background-color: #DFDFED;
+}
+
+.layout-single-column .compose-form__publish-button-wrapper button, .layout-single-column .report-dialog-modal__actions .button:hover, .layout-single-column .server-banner .button, .layout-single-column .sign-in-banner .button, .layout-single-column .ui__header__links .button{
+    background-color: #4F51A0;
+    border-color: #4F51A0;
+    color: #DFDFED;
+}
+
+.account__header__bio .account__header__fields dd, .layout-single-column .account__header__bio .account__header__fields dt, .layout-single-column .account__header__extra__links a, .layout-single-column .account__section-headline a, .layout-single-column .account__section-headline button, .layout-single-column .attachment-list.compact .fa, .layout-single-column .attachment-list__list a, .layout-single-column .autosuggest-textarea__suggestions, .layout-single-column .block-modal__action-bar>div, .layout-single-column .boost-modal__action-bar>div, .layout-single-column .character-counter, .layout-single-column .column-header__button, .layout-single-column .compose-form .autosuggest-account .display-name__account, .layout-single-column .compose-form .autosuggest-textarea__textarea, .layout-single-column .compose-form .autosuggest-textarea__textarea::placeholder, .layout-single-column .compose-form .compose-form__buttons-wrapper, .layout-single-column .compose-form .compose-form__modifiers, .layout-single-column .compose-form .icon-button, .layout-single-column .compose-form .spoiler-input__input, .layout-single-column .compose-form .spoiler-input__input::placeholder, .layout-single-column .compose-form__poll-wrapper .button.button-secondary, .layout-single-column .compose-panel .compose-form__autosuggest-wrapper, .layout-single-column .confirmation-modal__action-bar>div, .layout-single-column .dropdown-menu__container__header, .layout-single-column .emoji-mart, .layout-single-column .emoji-mart-anchor, .layout-single-column .emoji-mart-anchors, .layout-single-column .empty-column-indicator, .layout-single-column .follow_requests-unlocked_explanation, .layout-single-column .language-dropdown__dropdown__results__item__common-name, .layout-single-column .link-footer p, .layout-single-column .link-footer p a, .layout-single-column .mute-modal__action-bar>div, .layout-single-column .muted .poll, .layout-single-column .muted .status__content, .layout-single-column .muted .status__content a, .layout-single-column .muted .status__content p, .layout-single-column .muted .status__display-name strong, .layout-single-column .navigation-bar>a, .layout-single-column .notification .status-link.hashtag, .layout-single-column .notification .status-link.mention:not(.hashtag), .layout-single-column .notification .status-link.mention:not(.hashtag):not(.mention), .layout-single-column .notification__filter-bar a, .layout-single-column .notification__filter-bar button, .layout-single-column .notification__message .fa-home, .layout-single-column .notification__message .fa-retweet, .layout-single-column .notification__message .fa-user-plus, .layout-single-column .poll__footer, .layout-single-column .poll__link, .layout-single-column .privacy-dropdown__option:not(.active) .privacy-dropdown__option__content, .layout-single-column .reply-indicator .display-name *, .layout-single-column .report-dialog-modal .dialog-option .poll__input, .layout-single-column .report-dialog-modal .poll__option.dialog-option>.poll__option__text, .layout-single-column .report-dialog-modal__textarea::placeholder, .layout-single-column .search-popout>h4, .layout-single-column .search__icon .fa-times-circle, .layout-single-column .search__popout>h4, .layout-single-column .server-banner h4, .layout-single-column .setting-text-label, .layout-single-column .sign-in-banner p, .layout-single-column .status .status__relative-time, .layout-single-column .status .status__visibility-icon, .layout-single-column .status-card .status-card__description, .layout-single-column .status-check-box__status .detailed-status__display-name, .layout-single-column .status__display-name, .layout-single-column .status__display-name.muted, .layout-single-column .status__prepend, .layout-single-column .status__prepend .status__display-name strong, .layout-single-column .text-icon-button, .layout-single-column .timeline-hint, .layout-single-column .trends__item__current, .layout-single-column .trends__item__name {
+    color: #7C7CAD;
+}
+
+.icon-button {
+    color: #626982;
+
+}
+
+.layout-single-column .account__header__bio .account__header__fields dd, .layout-single-column .account__header__bio .account__header__fields dt, .layout-single-column .account__header__extra__links a, .layout-single-column .account__section-headline a, .layout-single-column .account__section-headline button, .layout-single-column .attachment-list.compact .fa, .layout-single-column .attachment-list__list a, .layout-single-column .autosuggest-textarea__suggestions, .layout-single-column .block-modal__action-bar>div, .layout-single-column .boost-modal__action-bar>div, .layout-single-column .character-counter, .layout-single-column .column-header__button, .layout-single-column .compose-form .autosuggest-account .display-name__account, .layout-single-column .compose-form .autosuggest-textarea__textarea, .layout-single-column .compose-form .autosuggest-textarea__textarea::placeholder, .layout-single-column .compose-form .compose-form__buttons-wrapper, .layout-single-column .compose-form .compose-form__modifiers, .layout-single-column .compose-form .icon-button, .layout-single-column .compose-form .spoiler-input__input, .layout-single-column .compose-form .spoiler-input__input::placeholder, .layout-single-column .compose-form__poll-wrapper .button.button-secondary, .layout-single-column .compose-panel .compose-form__autosuggest-wrapper, .layout-single-column .confirmation-modal__action-bar>div, .layout-single-column .dropdown-menu__container__header, .layout-single-column .emoji-mart, .layout-single-column .emoji-mart-anchor, .layout-single-column .emoji-mart-anchors, .layout-single-column .empty-column-indicator, .layout-single-column .follow_requests-unlocked_explanation, .layout-single-column .language-dropdown__dropdown__results__item__common-name, .layout-single-column .link-footer p, .layout-single-column .link-footer p a, .layout-single-column .mute-modal__action-bar>div, .layout-single-column .muted .poll, .layout-single-column .muted .status__content, .layout-single-column .muted .status__content a, .layout-single-column .muted .status__content p, .layout-single-column .muted .status__display-name strong, .layout-single-column .navigation-bar>a, .layout-single-column .notification .status-link.hashtag, .layout-single-column .notification .status-link.mention:not(.hashtag), .layout-single-column .notification .status-link.mention:not(.hashtag):not(.mention), .layout-single-column .notification__filter-bar a, .layout-single-column .notification__filter-bar button, .layout-single-column .notification__message .fa-home, .layout-single-column .notification__message .fa-retweet, .layout-single-column .notification__message .fa-user-plus, .layout-single-column .poll__footer, .layout-single-column .poll__link, .layout-single-column .privacy-dropdown__option:not(.active) .privacy-dropdown__option__content, .layout-single-column .reply-indicator .display-name *, .layout-single-column .report-dialog-modal .dialog-option .poll__input, .layout-single-column .report-dialog-modal .poll__option.dialog-option>.poll__option__text, .layout-single-column .report-dialog-modal__textarea::placeholder, .layout-single-column .search-popout>h4, .layout-single-column .search__icon .fa-times-circle, .layout-single-column .search__popout>h4, .layout-single-column .server-banner h4, .layout-single-column .setting-text-label, .layout-single-column .sign-in-banner p, .layout-single-column .status .status__relative-time, .layout-single-column .status .status__visibility-icon, .layout-single-column .status-card .status-card__description, .layout-single-column .status-check-box__status .detailed-status__display-name, .layout-single-column .status__display-name, .layout-single-column .status__display-name.muted, .layout-single-column .status__prepend, .layout-single-column .status__prepend .status__display-name strong, .layout-single-column .text-icon-button, .layout-single-column .timeline-hint, .layout-single-column .trends__item__current, .layout-single-column .trends__item__name {
+    color: #7C7CAD;
+}
+
+.dismissable-banner__message h1, .warning-banner__message h1 {
+    color: #7C7CAD;
+}
+
+.account-role {
+    border: 1px solid #7C7CAD;
+    color: #7C7CAD;
+}
+
+.icon-button {
+    color: #626982;
+}
+
+body.theme-default.layout-single-column {
+    --color-accent-dark: #626982;
+}
+
+.column-back-button {
+    color: #626982;
+}
+
+.layout-single-column .account .account__display-name, .layout-single-column .account__header__tabs__name h1 small, .layout-single-column .announcements__pagination .icon-button:hover i, .layout-single-column .column-settings__section, .layout-single-column .server-banner__introduction, .layout-single-column .server-banner__number-label, .layout-single-column .setting-toggle__label {
+    color: #626982;
+}
+
+.layout-single-column .account .account__display-name, .layout-single-column .account__header__tabs__name h1 small, .layout-single-column .announcements__pagination .icon-button:hover i, .layout-single-column .column-settings__section, .layout-single-column .server-banner__introduction, .layout-single-column .server-banner__number-label, .layout-single-column .setting-toggle__label {
+    color: #626982;
+}
+.layout-single-column .account__header__tabs__name h1 small{
+    color: #626982;
+}
+
+.column-link--transparent.active {
+    color: #626982;
+}
+
+.button {
+    background-color: #626982;
+}
+
+.account__section-headline a.active:before, .account__section-headline button.active:before, .notification__filter-bar a.active:before, .notification__filter-bar button.active:before {
+    background: #626982;
+}
+
+body.theme-bird-ui-light.layout-single-column {
+    --color-dim: #DFDFED;
+    --color-dim: #626982;
+    --color-mud: #DFDFED;
+    --color-bg-compose-form:#DFDFED;
+    --color-accent-dark: #626982;
+    
+}
+
+.layout-single-column .account__section-headline a.active:after{
+    background-color: #626982;
+}

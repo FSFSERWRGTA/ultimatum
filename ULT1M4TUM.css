@@ -1,9 +1,20 @@
 body.theme-default.layout-single-column {
-    --bg-image: url("https://raw.githubusercontent.com/FSFSERWRGTA/ultimatum/main/mastodon/bg_light.png");
+    --bg-image: url("https://raw.githubusercontent.com/FSFSERWRGTA/ultimatum/main/mastodon/bg_ligh.png");
     --logo: url("https://raw.githubusercontent.com/FSFSERWRGTA/ultimatum/main/mastodon/logo_light.png");
     --m-logo: url("https://raw.githubusercontent.com/FSFSERWRGTA/ultimatum/main/mastodon/logo_light.png");
 }
 
+body.theme-theme-ui-dark.layout-single-column{
+    --bg-image: url("https://raw.githubusercontent.com/FSFSERWRGTA/ultimatum/main/mastodon/bg_ligh.png");
+    --logo: url("https://raw.githubusercontent.com/FSFSERWRGTA/ultimatum/main/mastodon/logo_light.png");
+    --m-logo: url("https://raw.githubusercontent.com/FSFSERWRGTA/ultimatum/main/mastodon/logo_light.png");
+}
+
+.ui__header__logo {
+    background-clip: content-box;
+    background-image: url("https://raw.githubusercontent.com/FSFSERWRGTA/ultimatum/main/mastodon/logo_light.png");
+}
+
 .layout-single-column .search__input, .layout-single-column input.setting-text {
     background-color: #DFDFED;
     border-color: #7C7CAD;
@@ -18,6 +29,7 @@ body.theme-default.layout-single-column {
     --color-bg-compose-form: #DFDFED;
     --color-mud: #DFDFED;
     --color-dim: #7C7CAD;
+    --color-light-text: #DFDFED;
 }
 
 .drawer__inner__mastodon {
@@ -223,10 +235,24 @@ body.theme-bird-ui-light.layout-single-column {
     --color-dim: #626982;
     --color-mud: #DFDFED;
     --color-bg-compose-form:#DFDFED;
-    --color-accent-dark: #626982;
+    --color-accent-dark: #DFDFED;
     
 }
 
 .layout-single-column .account__section-headline a.active:after{
     background-color: #626982;
+}
+.column-link__icon {
+    color: #DFDFED !important; /* 파란색으로 강제로 적용 */
+  }
+.icon-with-badge{
+    color: #DFDFED !important; 
+}
+  
+.naxvigation-panel {
+     color: #DFDFED !important; /* 색상을 파란색으로 강제 적용 */
+}   
+  
+#mastodon > div > div > div.columns-area__panels > div.columns-area__panels__pane.columns-area__panels__pane--start.columns-area__panels__pane--navigational > div > div > a:nth-child(3) > i > i{
+    color: #DFDFED !important; 
 }

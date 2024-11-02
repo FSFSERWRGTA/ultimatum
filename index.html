@@ -12,82 +12,111 @@
             border-radius: 50%;
             box-shadow: 0 0 5px 5px white;
         }
+        
+        /* 페이드 아웃 효과 */
+        .fade-out {
+            opacity: 0;
+            transition: opacity 0.5s ease;
+        }
     </style>
+    <!-- jQuery CDN 추가 -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 </head>
 <body>
     <div class="center">
-        <a href="home.html">
+        <a href="home.html" id="logo-link">
             <img src="img/logo.png" alt="logo">
-        <a>
+        </a>
     </div>
     <script>
-        for (let i = 0; i < 200; i++) {
-            const snow = document.createElement("div");
-            snow.className = "snow";
-            snow.style.opacity = Math.random();
+        // 눈송이 생성 함수
+        function createSnowflakes() {
+            for (let i = 0; i < 200; i++) {
+                const snow = document.createElement("div");
+                snow.className = "snow";
+                snow.style.opacity = Math.random();
 
-            // 화면 안에서 시작
-            const startX = Math.random() * 100; // 0 ~ 100vw 범위
-            const endX = startX - 50; // 왼쪽으로 떨어짐
-            const startY = 0; // Y좌표는 0으로 고정
+                // 화면 안에서 시작
+                const startX = Math.random() * 100; // 0 ~ 100vw 범위
+                const endX = startX - 50; // 왼쪽으로 떨어짐
+                const startY = 0; // Y좌표는 0으로 고정
 
-            const scale = Math.max(Math.random(), 0.1); // 무작위 크기
+                const scale = Math.max(Math.random(), 0.1); // 무작위 크기
 
-            const keyframe = [
-                { transform: `translate(${startX}vw, ${startY}vh) scale(${scale})` }, // 시작
-                { transform: `translate(${endX}vw, 100vh) scale(${scale})` }, // 끝
-            ];
+                const keyframe = [
+                    { transform: `translate(${startX}vw, ${startY}vh) scale(${scale})` }, // 시작
+                    { transform: `translate(${endX}vw, 100vh) scale(${scale})` }, // 끝
+                ];
 
-            // 눈송이의 속도를 랜덤하게 설정 (최소 5초, 최대 15초)
-            const duration = Math.random() * 5000 + 1000; // 5000ms에서 15000ms 사이
+                // 눈송이의 속도를 랜덤하게 설정 (최소 5초, 최대 15초)
+                const duration = Math.random() * 5000 + 1000; // 5000ms에서 15000ms 사이
 
-            const option = {
-                duration: duration,
-                easing: "linear",
-                iterations: Infinity,
-                delay: -Math.random() * 20000, // 무작위 지연 시간
-            };
+                const option = {
+                    duration: duration,
+                    easing: "linear",
+                    iterations: Infinity,
+                    delay: -Math.random() * 20000, // 무작위 지연 시간
+                };
 
-            snow.animate(keyframe, option);
-            document.body.appendChild(snow);
+                snow.animate(keyframe, option);
+                document.body.appendChild(snow);
+            }
+
+            for (let i = 0; i < 200; i++) {
+                const snow = document.createElement("div");
+                snow.className = "snow";
+                snow.style.opacity = Math.random();
+
+                // 화면 오른쪽 바깥에서 시작
+                const startX = 110 + Math.random() * 50; // 100vw ~ 150vw 범위
+                const endX = startX - 50; // 왼쪽으로 떨어짐
+                const startY = Math.random() * -100; // 위에서 시작
+
+                const scale = Math.max(Math.random(), 0.1); // 무작위 크기
+
+                const keyframe = [
+                    { transform: `translate(${startX}vw, ${startY}vh) scale(${scale})` }, // 랜덤한 Y좌표에서 시작
+                    { transform: `translate(${endX}vw, 100vh) scale(${scale})` }, // 화면 아래로 떨어짐
+                ];
+
+                // 눈송이의 속도를 랜덤하게 설정 (최소 5초, 최대 15초)
+                const duration = Math.random() * 5000 + 1000; // 5000ms에서 15000ms 사이
+
+                const option = {
+                    duration: duration,
+                    easing: "linear",
+                    iterations: Infinity,
+                    delay: -Math.random() * 20000, // 무작위 지연 시간
+                };
+
+                snow.animate(keyframe, option);
+                document.body.appendChild(snow);
+            }
+
+            $(".ico_btn_board").click(function(){
+                $(".info_txt").removeClass("hidden_info");
+                $(".info_txt").toggleClass("appear_info disappear_info");
+            });
         }
 
-        for (let i = 0; i < 200; i++) {
-            const snow = document.createElement("div");
-            snow.className = "snow";
-            snow.style.opacity = Math.random();
+        // 링크 클릭 이벤트 추가
+        document.getElementById('logo-link').addEventListener('click', function(event) {
+            event.preventDefault(); // 기본 링크 동작 방지
 
-            // 화면 오른쪽 바깥에서 시작
-            const startX = 110 + Math.random() * 50; // 100vw ~ 150vw 범위
-            const endX = startX - 50; // 왼쪽으로 떨어짐
-            const startY = Math.random() * -100; // 위에서 시작
+            // 페이드 아웃 효과 적용
+            document.body.classList.add('fade-out');
 
-            const scale = Math.max(Math.random(), 0.1); // 무작위 크기
+            // 눈송이 생성
+            createSnowflakes();
 
-            const keyframe = [
-                { transform: `translate(${startX}vw, ${startY}vh) scale(${scale})` }, // 랜덤한 Y좌표에서 시작
-                { transform: `translate(${endX}vw, 100vh) scale(${scale})` }, // 화면 아래로 떨어짐
-            ];
-
-            // 눈송이의 속도를 랜덤하게 설정 (최소 5초, 최대 15초)
-            const duration = Math.random() * 5000 + 1000; // 5000ms에서 15000ms 사이
-
-            const option = {
-                duration: duration,
-                easing: "linear",
-                iterations: Infinity,
-                delay: -Math.random() * 20000, // 무작위 지연 시간
-            };
-
-            snow.animate(keyframe, option);
-            document.body.appendChild(snow);
-        }
-        
-        $(".ico_btn_board").click(function(){
-            $(".info_txt").removeClass("hidden_info");
-            
-            $(".info_txt").toggleClass("appear_info disappear_info");
+            // 페이드 아웃 효과가 끝난 후 페이지 이동
+            setTimeout(() => {
+                window.location.href = this.getAttribute('href');
+            }, 500); // CSS transition duration과 동일한 시간
         });
+
+        // 눈송이 생성
+        createSnowflakes();
     </script>
 </body>
 </html>

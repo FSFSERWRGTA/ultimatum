@@ -3,14 +3,24 @@
 <head>
     <title>ultimatum</title>
     <link rel="stylesheet" href="home_style.css">
+    <style>
+        /* 페이드 인 효과 스타일 */
+        .fade-in {
+            opacity: 0;
+            transition: opacity 1s ease;
+        }
+        .fade-in.show {
+            opacity: 1;
+        }
+    </style>
     <!-- Vue.js CDN -->
     <script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
 </head>
 <body>
 
-    <aside class="side-bar">
+    <aside class="side-bar fade-in">
         <div>
-            <a href="#"><img src="img/main/logo_main.png" alt="logo" style="margin-top: 85px; max-width: 40%;" ></a>
+            <a href="#"><img src="img/main/logo_main.png" alt="logo" style="margin-top: 85px; max-width: 40%;"></a>
         </div>
         <section class="side-bar__icon-box">
             <div class="side-bar__icon-box1">
@@ -22,64 +32,56 @@
                 <img class="my_img" src="img/main/undershine.png" alt="word highlight">
             </div>
             <div class="side-bar__icon-box3">
-                <a href="system/system.html"><img src="img/main/system.png" alt="system" style="max-width: 18%;"><a>
+                <a href="system/system.html"><img src="img/main/system.png" alt="system" style="max-width: 18%;"></a>
                 <img class="my_img" src="img/main/undershine.png" alt="system highlight">
             </div>
             <div class="side-bar__icon-box4">
-                <a href="member/member.html"><img src="img/main/member.png" alt="member"style="max-width: 18%;"></a>
+                <a href="member/member.html"><img src="img/main/member.png" alt="member" style="max-width: 18%;"></a>
                 <img class="my_img" src="img/main/undershine.png" alt="member highlight">
             </div>
         </section>
     </aside>
-    
-    </aside>
 
-    <main>
+    <main class="fade-in">
         <!-- 별 -->
         <div>
             <div>
                 <img src="img/main/star.png" alt="star" style="margin-top: -40px; max-width:25%; height: auto;">
             </div>
-            
         </div>     
         <!-- 카운트다운 -->
         <div class="container">
             <div class="days-c">
                 <p class="timer" id="day">0</p>
             </div>
-            <p class="timer" >:</p>
+            <p class="timer">:</p>
             <div class="hours-c">
                 <p class="timer" id="hours">0</p>
             </div>
-            <p class="timer" >:</p>
-    
+            <p class="timer">:</p>
             <div class="mins-c">
                 <p class="timer" id="mins">0</p>
             </div>
-            <p class="timer" >:</p>
-    
+            <p class="timer">:</p>
             <div class="seconds-c">
                 <p class="timer" id="seconds">0</p>
             </div>
         </div>
         <!-- 간지대사 -->
         <div class="last">
-            <div class ="text">
+            <div class="text">
                 <p>멸망을 향하는 행성이 최후의 구원을 기다리는 중입니다. </p>
             </div>
-            <div class ="img">
+            <div class="img">
                 <img src="img/main/timerhightlight.png" alt="undershine">
             </div>
-            
         </div>
-
         <!-- 청서양식 등 -->
-        <div class="">
+        <div>
             <section class="main-bar__icon-box">
                 <div class="main-bar__icon-box2">
                     <a href="#"><div class="rectangle-icon"><span class="imtext">신청서 양식</span></div></a>
                 </div>
-                
                 <div class="main-bar__icon-box2">
                     <a href="#"><div class="rectangle-icon"><span class="imtext">질의응답</span></div></a>
                 </div>
@@ -90,14 +92,10 @@
                     <a href="#"><div class="rectangle-icon"><span class="imtext">접수현황</span></div></a>
                 </div>
             </section>
-            
-
         </div>
-        
-
     </main>
 
-    <aside class="side-bar2">
+    <aside class="side-bar2 fade-in">
         <div>
             <img src="img/star/star1.png" alt="logo2">
         </div>
@@ -111,38 +109,45 @@
             <img src="img/star/star4.png" alt="logo2">
         </div>
     </aside>
-    
-
 
     <script>
+        // 페이드 인 효과 적용
+        window.onload = function() {
+            const fadeElements = document.querySelectorAll('.fade-in');
+            fadeElements.forEach(element => {
+                element.classList.add('show');
+            });
+        };
+
         // Vue 인스턴스 생성
-        const dayEl = document.getElementById('day')
-        const hoursEl = document.getElementById('hours')
-        const minsEl = document.getElementById('mins')
-        const secondsEl = document.getElementById('seconds')
+        const dayEl = document.getElementById('day');
+        const hoursEl = document.getElementById('hours');
+        const minsEl = document.getElementById('mins');
+        const secondsEl = document.getElementById('seconds');
 
-        function countDown(){
-            const newYear = new Date(2024, 12, 25)
-            const current = new Date()
+        function countDown() {
+            const newYear = new Date(2024, 11, 25); // 월은 0부터 시작
+            const current = new Date();
 
-            const diffTime = Math.abs(newYear-current)
+            const diffTime = Math.abs(newYear - current);
 
-            const days = Math.floor( diffTime/(1000*3600*24) )
-            const hours = Math.floor( diffTime/(1000*3600) %24)
-            const mins = Math.floor( diffTime/(1000*60) %60)
-            const seconds = Math.floor( diffTime/(1000) %60)
+            const days = Math.floor(diffTime / (1000 * 3600 * 24));
+            const hours = Math.floor(diffTime / (1000 * 3600) % 24);
+            const mins = Math.floor(diffTime / (1000 * 60) % 60);
+            const seconds = Math.floor(diffTime / 1000 % 60);
 
-            dayEl.innerHTML = formatTime(days)
-            hoursEl.innerHTML = formatTime(hours)
-            minsEl.innerHTML = formatTime(mins)
-            secondsEl.innerHTML = formatTime(seconds)
+            dayEl.innerHTML = formatTime(days);
+            hoursEl.innerHTML = formatTime(hours);
+            minsEl.innerHTML = formatTime(mins);
+            secondsEl.innerHTML = formatTime(seconds);
         }
-        function formatTime(time){
+
+        function formatTime(time) {
             return time < 10 ? (`0${time}`) : (time);
         }
-        countDown()
 
-        setInterval(countDown, 1000)
+        countDown();
+        setInterval(countDown, 1000);
     </script>
 
 </body>

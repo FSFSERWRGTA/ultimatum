@@ -1,11 +1,11 @@
 body.theme-default.layout-single-column {
-    --bg-image: url("https://raw.githubusercontent.com/FSFSERWRGTA/ultimatum/main/mastodon/bg_ligh.png");
+    --bg-image: url("https://raw.githubusercontent.com/FSFSERWRGTA/ultimatum/main/mastodon/bg_light.png");
     --logo: url("https://raw.githubusercontent.com/FSFSERWRGTA/ultimatum/main/mastodon/logo_light.png");
     --m-logo: url("https://raw.githubusercontent.com/FSFSERWRGTA/ultimatum/main/mastodon/logo_light.png");
 }
 
 body.theme-theme-ui-dark.layout-single-column{
-    --bg-image: url("https://raw.githubusercontent.com/FSFSERWRGTA/ultimatum/main/mastodon/bg_ligh.png");
+    --bg-image: url("https://raw.githubusercontent.com/FSFSERWRGTA/ultimatum/main/mastodon/bg_dark.png");
     --logo: url("https://raw.githubusercontent.com/FSFSERWRGTA/ultimatum/main/mastodon/logo_light.png");
     --m-logo: url("https://raw.githubusercontent.com/FSFSERWRGTA/ultimatum/main/mastodon/logo_light.png");
 }
@@ -29,8 +29,9 @@ body.theme-default.layout-single-column {
     --color-bg-compose-form: #DFDFED;
     --color-mud: #DFDFED;
     --color-dim: #7C7CAD;
-    --color-light-text: #DFDFED;
-}
+ }
+
+
 
 .drawer__inner__mastodon {
     background-image: url("https://github.com/FSFSERWRGTA/ultimatum/blob/main/mastodon/logo_light.png");
@@ -242,17 +243,24 @@ body.theme-bird-ui-light.layout-single-column {
 .layout-single-column .account__section-headline a.active:after{
     background-color: #626982;
 }
+
+/*
 .column-link__icon {
-    color: #DFDFED !important; /* 파란색으로 강제로 적용 */
+    color: #DFDFED !important; 
   }
 .icon-with-badge{
     color: #DFDFED !important; 
 }
   
 .naxvigation-panel {
-     color: #DFDFED !important; /* 색상을 파란색으로 강제 적용 */
+     color: #DFDFED !important; 
 }   
   
 #mastodon > div > div > div.columns-area__panels > div.columns-area__panels__pane.columns-area__panels__pane--start.columns-area__panels__pane--navigational > div > div > a:nth-child(3) > i > i{
     color: #DFDFED !important; 
 }
+
+.fa.fa-search.active{
+    background-color: #DFDFED;
+}
+*/

@@ -3,12 +3,16 @@
     font-weight: 100;
     src: url(../../HeirofLightRegular.woff) format("woff2");
   }
-
+a {
+    text-decoration-line: none;
+    text-decoration: none;
+    color: white;
+    }
 @font-face {
 	font-family: 'Pretendard';
 	font-weight: 900;
 	font-display: swap;
-	src: local('Pretendard Light'), url(../../woff2/Pretendard-Light.woff2) format('woff2'), url(../../woff2/Pretendard-Light.woff) format('woff');
+	src: local('Pretendard Light'), url(../../woff2/Pretendard-Light.woff2) format('woff2'), url(../../../woff2/Pretendard-Light.woff) format('woff');
 }
 
 @font-face {
@@ -17,7 +21,6 @@
     font-weight: normal;
     font-style: normal;
 }
-
 body {
     margin: 0;
     padding: 0;
@@ -25,104 +28,199 @@ body {
     background-size: cover; /* 화면에 맞게 이미지 크기 조정 */
     background-position: center; /* 이미지의 중앙을 기준으로 배치 */
     background-repeat: no-repeat; /* 이미지 반복 방지 */
+    background-attachment: fixed; /* 스크롤에도 배경 고정 */
     height: 100vh; /* 화면 전체 높이를 차지 */
-    overflow: hidden; /* 눈송이가 화면 밖으로 넘어가도 스크롤이 생기지 않도록 함 */
+    overflow: hidden;
+
 }
 
 .thing{
     padding-top: 80px;
 }
 
-.head{
+.head {
     display: flex;
     justify-content: space-around; /* 아이콘 사이의 간격 조정 */
     align-items: center; /* 세로 가운데 정렬 */
     padding: 40px;
-    margin: 0 150px;
+    margin: 0 150px; /* 좌우 여백 */
+    position: fixed; /* 고정 위치 설정 */
+    top: 0; /* 화면 상단에 고정 */
+    left: 0; /* 화면 왼쪽에 고정 */
+    width: calc(100% - 300px); /* 좌우 여백을 고려한 전체 너비 */
+
+    z-index: 1000; /* 다른 요소 위에 표시되도록 z-index 설정 */
 }
 
 .head img {
     max-width: 80%; /* 이미지 너비 조정 */
 }
 
+
+/* 전체 테이블 영역 */
+.table {
+    font-family: 'Pretendard';
+    font-size: 13px;
+    width: 100%; /* 테이블 전체 너비를 화면 가득 채우기 */
+    margin: 0 auto; /* 가운데 정렬 */
+    padding: 20px 0; /* 상하 여백 */
+    color: white;
+    text-align: center;
+    border-collapse: collapse; /* 셀 간의 간격 제거 */
+    border-spacing: 0; /* 셀 사이의 틈 없애기 */
+}
+
+/* 테이블 설정 */
+.table table {
+    width: 100%; /* 테이블 전체 너비 */
+    table-layout: fixed; /* 모든 열을 동일한 너비로 설정 */
+    border-collapse: collapse; /* 테두리 겹치지 않도록 */
+}
+
+
+
+/* 테이블 데이터 셀 스타일 */
+.blue {
+    text-align: center; /* 텍스트 가운데 정렬 */
+    padding: 10px 0;
+    color: #373D53; /* 기본 텍스트 색상 */
+    border-top: 3px solid #373D53; /* 기본 행 경계선 */
+}
+.white {
+    text-align: center; /* 텍스트 가운데 정렬 */
+    padding: 10px 0;
+    color: white; /* 기본 텍스트 색상 */
+    border-top: 3px solid white; /* 기본 행 경계선 */
+}
+.white2 {
+    padding: 10px 0;
+    color: white; /* 기본 텍스트 색상 */
+    border-top: 3px solid white; /* 기본 행 경계선 */
+}
+
+.fade-in {
+    opacity: 0;
+    transition: opacity 1s ease;
+}
+.fade-in.show {
+    opacity: 1;
+}
+
+
+
+
+/* 테이블 하단 맞추기 */
+.table table {
+    margin-top: 100px; /* 상단 여백 추가로 헤더와 겹침 방지 */
+}
+
+.table2 {
+    font-family: 'Pretendard';
+    font-size: 13px;
+    width: 100%; /* 테이블 전체 너비를 화면 가득 채우기 */
+    margin: 0 auto; /* 가운데 정렬 */
+    padding: 20px 0; /* 상하 여백 */
+    color: white;
+}
+
+
 /*사각형 세 개 있는 구역 */
 main {
     grid-area: main; /* 그리드 영역 지정 */
-    min-height: 100vh; /* 최소 높이: 전체 화면 */
+    height: 70vh; /* 화면 높이의 70% */
     display: flex; /* 플렉스 박스 사용 */
     flex-direction: column; /* 세로 방향 정렬 */
-    align-items: center; /* 가로 가운데 정렬 */
-    margin: 0 auto; /* 좌우 가운데 정렬 */
-    width: 40%; /* 너비 설정 */
-}
-
-/* 세 박스를 감싸고 있음 */
-.main-bar__icon-box {
-    display: flex; /* 플렉스 박스 사용 */
-    justify-content: center; /* 아이콘들 사이의 간격을 중앙 정렬 */
-    align-items: center; /* 세로 가운데 정렬 */
-    width: 100%; /* 너비를 부모 요소에 맞춤 */
-    gap: 50px; /* 아이콘 간의 간격 조정 (필요시) */
-    padding-top: 30px;
-}
-
-
-/*박스 하나*/
-.rectangle-icon {
-    position: relative;
-    width: 250px; /* 원하는 가로 크기 */
-    height: 500px; /* 원하는 세로 크기 */
-    background: black;
-    color: #9DB1CB;
-    text-align: center;
-    text-indent: 0.1em;
     
+    margin: 0 auto; /* 좌우 가운데 정렬 */
+    transform: translateY(200px);
+    width: 50%; /* 너비 설정 */
+    overflow: auto; /* 스크롤 가능 */
 }
 
-/*내부 글씨*/
-.imtext {    
-    font-family: "SUIT";
-    position: absolute;
-    top: 85%; /* 부모 요소의 50% 위치 */
-    transform: translate(-50%, -50%); /* 중앙 정렬 */
-    z-index: 1;
-    color: black; /* 텍스트 색상 */
-    font-size: 20px; /* 텍스트 크기 */
-    font-weight: bold; /* 텍스트 두께 */
-    text-align: center; /* 텍스트 중앙 정렬 */
+main::-webkit-scrollbar {
+    display: none; /* Chrome, Safari, Opera에서 스크롤바 숨기기 */
 }
 
-/*작은 글씨*/
-.imtext2 {    
-    font-family: "SUIT";
-    position: absolute;
-    top: 90%; /* 부모 요소의 50% 위치 */
-    left: 50%; /* 부모 요소의 50% 위치 */
-    transform: translate(-50%, -50%); /* 중앙 정렬 */
-    z-index: 1;
-    color: black; /* 텍스트 색상 */
-    font-size: 10px; /* 텍스트 크기 */
-    font-weight: bold; /* 텍스트 두께 */
-    text-align: center; /* 텍스트 중앙 정렬 */
+main {
+    -ms-overflow-style: none;  /* Internet Explorer 및 Edge에서 스크롤바 숨기기 */
+    scrollbar-width: none; /* Firefox에서 스크롤바 숨기기 */
 }
 
-/* 그라데이션 효과를 위한 자식 요소 */
-.gradient-overlay {
-    position: absolute; /* 부모 요소를 기준으로 위치 설정 */
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: linear-gradient(to top, rgba(255, 255, 255, 0.7) 0%, rgba(255, 255, 255, 0) 100%);
-    opacity: 0; /* 기본적으로 보이지 않도록 설정 */
-    transition: opacity 0.3s ease; /* 부드러운 전환 효과 */
+.WARNINGI{
+    
+    margin-top: 30px; /* 위간격만 적용 */
+    text-align: center;
+
 }
 
-
-/* 마우스 오버 시 그라데이션 보이기 */
-.rectangle-icon:hover .gradient-overlay {
-    opacity: 1; /* 마우스 오버 시 그라데이션 표시 */
+.WARNINGI {
+    margin-top: 30px; /* 위간격만 적용 */
+    text-align: center;
 }
+
+.WARNINGI img {
+    width: 10%; /* 너비를 절반으로 줄임 */
+    height: auto; /* 비율 유지 */
+}
+
+.highlight{
+    background-color: #DADFE8;
+    color: #0F1113;
+}
+
+.num{
+    font-family: 'SUIT';
+    font-size: 15px; /* 텍스트 크기 */
+    margin-top: 30px; /* 위간격만 적용 */
+    color: white;
+    line-height:30px;
+    text-align: justify;
+}
+
+.example{
+    color: #373D53;
+    font-style: italic;
+}
+
+.WARNING{
+    font-family: 'Pretendard';
+    font-size: 15px; /* 텍스트 크기 */
+    margin-top: 30px; /* 위간격만 적용 */
+    color: #373D53;
+    text-align: center;
+    line-height:30px;
+
+}
+
+.narra{
+    font-family: 'Pretendard';
+    font-size: 14px; /* 텍스트 크기 */
+    margin-top: 30px; /* 위간격만 적용 */
+    color: white;
+    text-align: center;
+    line-height:30px;
+
+}
+
+.check {
+    font-family: 'SUIT';
+    font-size: 13px; /* 텍스트 크기 */
+    color: white;
+    line-height: 30px;
+    text-align: justify;
+    margin-bottom: 1px; /* 요소 사이 간격을 줄이기 위해 여백 설정 */
+}
+
+.in {
+    font-family: 'SUIT';
+    font-size: 13px; /* 텍스트 크기 */
+    color: white;
+    line-height: 30px;
+    text-align: justify;
+    padding-left: 15px;
+    margin-top: 1px; /* 요소 사이 간격을 줄이기 위해 여백 설정 */
+}
+
 
 /* 오른쪽 사이드바*/
 .side-bar2 {

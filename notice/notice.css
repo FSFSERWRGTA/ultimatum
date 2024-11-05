@@ -205,7 +205,7 @@ main {
 .check {
     font-family: 'SUIT';
     font-size: 13px; /* 텍스트 크기 */
-    color: white;
+    color: #d9dfe9;
     line-height: 30px;
     text-align: justify;
     margin-bottom: 1px; /* 요소 사이 간격을 줄이기 위해 여백 설정 */

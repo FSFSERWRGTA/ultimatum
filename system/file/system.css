@@ -3,11 +3,6 @@
     font-weight: 100;
     src: url(../../../HeirofLightRegular.woff) format("woff2");
   }
-a {
-    text-decoration-line: none;
-    text-decoration: none;
-    color: white;
-    }
 @font-face {
 	font-family: 'Pretendard';
 	font-weight: 900;
@@ -179,7 +174,7 @@ main {
     font-family: 'Pretendard';
     font-size: 15px; /* 텍스트 크기 */
     margin-top: 30px; /* 위간격만 적용 */
-    color: #373D53;
+    color: #d9dfe9;
     text-align: center;
     line-height:30px;
 
@@ -241,4 +236,42 @@ main {
 
 .side-bar2 img:first-child {
     margin-top: 0; /* 첫 번째 이미지는 간격 제거 */
+}
+
+
+.rectangle-icon {
+    width: 130px !important;
+    height: 30px !important;
+    background-color: #9DB1CB;
+    border-radius: 16px !important;
+    overflow: hidden !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    transition: background 0.3s ease !important;
+}
+
+
+/* 텍스트 스타일 */
+.rectangle-icon h2{
+    margin: 0; /* 기본 여백 제거 */
+    font-size: 13px;
+    text-align: center;
+}
+
+/* 링크 스타일 */
+.rectangle-icon a {
+    font-family: "Pretendard";
+    color: rgb(54, 54, 57); /* 기본 텍스트 색상 */
+    text-decoration: none; /* 밑줄 제거 */
+    transition: color 0.3s ease; /* 텍스트 색상 전환 효과 */
+}
+
+/* 마우스 오버 시 배경과 텍스트 색상 변경 */
+.rectangle-icon:hover {
+    background-color: #475C79; /* 박스 배경색 변경 */
+}
+
+.rectangle-icon:hover a {
+    color: #9DB1CB; /* 링크 텍스트 색상 변경 */
 }

@@ -17,6 +17,12 @@
     font-weight: normal;
     font-style: normal;
 }
+@font-face {
+	font-family: 'SIMPLECANDY';
+	font-weight: 900;
+	font-display: swap;
+	src: url(../woff2/SIMPLECANDY.woff) format("woff");
+}
 body {
     margin: 0;
     padding: 0;
@@ -26,41 +32,78 @@ body {
     background-repeat: no-repeat; /* 이미지 반복 방지 */
     background-attachment: fixed; /* 스크롤에도 배경 고정 */
     height: 100vh; /* 화면 전체 높이를 차지 */
-    overflow: hidden;
-
 }
 
 .thing{
     padding-top: 80px;
 }
+.imtext7 {    
+    font-family: "SIMPLECANDY";
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    z-index:1;
+    color:white;
+    font-size:40px;
+    padding-top: 7px;
+    width:120px;
+}
+.main-bar__icon-box {
+    display: flex;
+    justify-content: space-between; /* 아이콘들 사이의 간격을 균등하게 배치 */
+    align-items: center; /* 세로 가운데 정렬 */
+    width: 80%;
+    padding-top: 27px;
+}
+
+.rectangle-icon2, .rectangle-icon3 {
+    display: flex;
+    align-items: center; /* 세로 중앙 정렬 */
+    justify-content: center; /* 가로 중앙 정렬 */
+    /* 요소 간격 조정을 위한 패딩/마진을 최소화 */
+}
+
+.rectangle-icon2 {
+    padding-top: 70px;
+    width: 200px; /* 아이콘2의 너비 */
+    height: 50px; /* 아이콘2의 높이 */
+    margin: 0 20px;
+}
+
+.rectangle-icon3 {
+    width: 300px; /* 아이콘3의 너비 */
+    height: 130px; /* 아이콘3의 높이 */
+}
+
+.rectangle-icon2 img, .rectangle-icon3 img {
+    max-width: 100%; /* 이미지가 상자의 너비를 넘지 않도록 설정 */
+    max-height: 100%; /* 이미지가 상자의 높이를 넘지 않도록 설정 */
+    object-fit: contain; /* 이미지가 상자 내에 비율을 유지하며 맞추어짐 */
+   }
 
 .head {
-    display: flex;
-    justify-content: space-around; /* 아이콘 사이의 간격 조정 */
+    font-family: "MOLIKA";
+    display: flex; /* 플렉스 박스 사용 */
+    justify-content: center; /* 아이콘들 사이의 간격을 중앙 정렬 */
     align-items: center; /* 세로 가운데 정렬 */
-    padding: 40px;
-    margin: 0 150px; /* 좌우 여백 */
-    position: fixed; /* 고정 위치 설정 */
-    top: 0; /* 화면 상단에 고정 */
-    left: 0; /* 화면 왼쪽에 고정 */
-    width: calc(100% - 300px); /* 좌우 여백을 고려한 전체 너비 */
-
+    padding-top: 10px;
+    text-decoration: none;
     z-index: 1000; /* 다른 요소 위에 표시되도록 z-index 설정 */
+
 }
 
-.head img {
-    max-width: 80%; /* 이미지 너비 조정 */
-}
 
-/*사각형 세 개 있는 구역 */
+/*멤버란*/
 main {
     grid-area: main; /* 그리드 영역 지정 */
-    height: 70vh; /* 화면 높이의 70% */
+    height: 70vh; /* 최소 높이: 전체 화면 */
     display: flex; /* 플렉스 박스 사용 */
     flex-direction: column; /* 세로 방향 정렬 */
-    
+    align-items: center; /* 가로 가운데 정렬 */
     margin: 0 auto; /* 좌우 가운데 정렬 */
-    transform: translateY(200px);
+    width: 40%; /* 너비 설정 */
+
+    transform: translateY(40px);
     width: 50%; /* 너비 설정 */
     overflow: auto; /* 스크롤 가능 */
 }
@@ -73,6 +116,7 @@ main {
     -ms-overflow-style: none;  /* Internet Explorer 및 Edge에서 스크롤바 숨기기 */
     scrollbar-width: none; /* Firefox에서 스크롤바 숨기기 */
 }
+
 
 .WARNINGI{
     

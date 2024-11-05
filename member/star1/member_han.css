@@ -10,13 +10,25 @@
 	font-display: swap;
 	src: local('Pretendard Light'), url(../../woff2/Pretendard-Light.woff2) format('woff2'), url(../../woff2/Pretendard-Light.woff) format('woff');
 }
-
+@font-face {
+	font-family: 'MOLIKA';
+	font-weight: 900;
+	font-display: swap;
+	src: url(../woff2/MOLIKA.woff2) format("woff2");
+}
 @font-face {
     font-family: 'Chosunilbo_myungjo';
     src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_one@1.0/Chosunilbo_myungjo.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 }
+@font-face {
+	font-family: 'SIMPLECANDY';
+	font-weight: 900;
+	font-display: swap;
+	src: url(../../woff2/SIMPLECANDY.woff) format("woff");
+}
+
 
 body {
     margin: 0;
@@ -65,29 +77,184 @@ body {
     height: auto;
     justify-content: space-between;
 }
-
-.full {
-    z-index: 4; 
-    height: 100vh;
-    width: 60%;
-    position: fixed; /* 고정 위치 */
-    right: 0; /* 오른쪽 정렬 */
-    top: 0; /* 상단에 고정 */
-    object-fit: cover; /* 이미지 비율 유지하면서 크기 조정 */
+.main{
+    position: relative;
+    width: 100%;
 }
+.full {
+    position: absolute;
+    width: 50%; /* 너비 설정 */
+    height: auto; /* 높이 자동 */
+    max-height: 100vh; /* 최대 높이를 화면 높이에 맞추기 */
+    object-fit: cover; /* 비율 유지하면서 오버플로우된 부분 자르기 */
+    object-position: top; /* 이미지가 위쪽부터 시작 */
+    position: sticky;
+    top: 0; /* 위쪽에 고정 */
+    right: 0; /* 오른쪽에 고정 */
+    left: auto; /* 왼쪽 간섭 방지 */
+    margin: 0; /* 여백 제거 */
+    margin-left: auto; /* 오른쪽 정렬 */
+    overflow: hidden; /* 오버플로우된 부분 숨기기 */
+    display: block; /* 여백 없이 정렬 */
+    z-index: 1;
+     /* 자식 요소의 절대 위치를 위해 상대적으로 설정 */
+}
+
+.skin {
+    width: 100%; /* 최대 너비 100%로 설정하여 화면 너비에 맞추기 */
+    height: auto; /* 높이 자동 */
+    align-items: center; 
+    position: relative; /* 자식 요소의 절대 위치를 위해 상대적으로 설정 */
+}
+
+.square {
+    position: absolute; /* 부모 요소에 대해 절대 위치 설정 */
+    top: 0; /* 위쪽에 붙이기 */
+    right: 0; /* 오른쪽에 붙이기 */
+    z-index: 2; /* 겹쳐서 보이도록 z-index 설정 */
+    width: 150px; /* 원하는 가로 크기 */
+    height: 200px; /* 원하는 세로 크기 */
+    text-align: center;
+    text-indent: 0.1em;
+    border-radius: 16px; 
+    background-color: rgba(255, 255, 255, 0.4); /* 반투명 배경색 (여기서는 흰색, 투명도 0.7) */
+    margin: 20px;
+}
+
+
+.left {
+    position: absolute; /* 부모 요소에 대해 절대 위치 설정 */
+    width: auto; /* 너비 자동 설정 */
+    height: 100%; /* 높이를 부모에 맞춤 */
+    top: 0; /* 위쪽에 붙이기 */
+    right: 0; /* 오른쪽에 붙이기 */
+    z-index: 2; /* 겹쳐서 보이도록 z-index 설정 */
+    display: flex; /* 플렉스 박스 사용 */
+    justify-content: center; /* 수평 중앙 정렬 */
+    align-items: center; /* 수직 중앙 정렬 */
+    transform: translateX(12%); /* 이미지의 중앙을 기준으로 이동 */
+}
+
+
+
 .side-bar2 img:first-child {
     margin-top: 0; /* 첫 번째 이미지는 간격 제거 */
 }
 
 .square01 {
+    position: absolute;
     z-index: 10;
-    position: relative;
-    width: 45%;
+    width: 50%;
     height: 100vh; /* 화면 전체 높이를 차지 */
     background-color: #333435;
     background: linear-gradient(#333435, black);
     overflow: auto; /* 스크롤 기능 활성화 */
     padding: 20px; /* 텍스트와 경계 사이의 여백 추가 */
+}
+
+.thro {
+    top:100px;
+    position: relative; /* 부모 요소를 상대적으로 설정 */
+    width: 80%; /* 너비 설정 */
+    height: 110px; /* 높이 자동 */
+    margin: 0 auto; /* 부모 요소를 가운데 정렬 */
+    background-color: #9AACC3;
+
+}
+.thro h1 {
+    font-family: 'MOLIKA'; /* 글꼴 설정 */
+    font-size: 60px; /* 글꼴 크기 설정 */
+    padding-top: 25px;
+    padding-left: 40px;
+    color: white;
+
+    }
+.thro img {
+    position: absolute; /* 부모 요소에 대해 절대 위치 설정 */
+    top: 50%; /* 세로 중앙 정렬 */
+    left: 50%; /* 가로 중앙 정렬 */
+    width: auto; /* 너비 100%로 설정 */
+    height: 100%;
+    transform: translate(-50%, -50%); /* 이미지의 중심을 기준으로 이동 */
+}
+.gradient-overlay {
+    position: absolute; /* 부모 요소를 기준으로 위치 설정 */
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1;
+    background: linear-gradient(to right, rgba(154, 172, 195, 1) 10%, rgba(255, 255, 255, 0) 100%); /* 색이 섞이는 부분을 더 짧게 설정 */
+    transition: opacity 0.3s ease; /* 부드러운 전환 효과 */
+}
+
+/* background-color: #333435;  */
+
+
+/* 테이블 설정 */
+table {
+    table-layout: fixed; /* 모든 열을 동일한 너비로 설정 */
+    border-collapse: collapse; /* 테두리 겹치지 않도록 */
+}
+table td {
+    padding: 10px 10px;
+    color: white; /* 기본 텍스트 색상 */
+    border: 2px solid white; /* 기본 행 경계선 */
+    text-align: justify;
+    text-align: center;
+}
+table th {
+    font-size: 18px;
+    padding: 10px 0;
+    color: white; /* 기본 텍스트 색상 */
+    border: 2px solid white; /* 기본 행 경계선 */
+    text-align: center;
+    font-weight: bold;
+}
+
+.table {
+    font-family: 'Pretendard';
+    font-size: 13px;
+    width: 80%; /* 테이블 전체 너비를 화면 가득 채우기 */
+    margin: 0 auto; /* 가운데 정렬 */
+    padding: 20px 0; /* 상하 여백 */
+    color: white;
+    border-collapse: collapse; /* 셀 간의 간격 제거 */
+    border-spacing: 0; /* 셀 사이의 틈 없애기 */
+    padding-top: 200px;
+    
+    
+}
+.table th:nth-child(odd),
+.table td:nth-child(odd) {
+    width: 10%; /* 홀수 칸 넓이 */
+    text-align: center;
+}
+
+/* 짝수 칸 (두 번째, 네 번째 등) 넓이 설정 */
+.table th:nth-child(even),
+.table td:nth-child(even) {
+    width: 40%; /* 짝수 칸 넓이 */
+}
+
+.table1 {
+    font-size: 13px;
+    width: 80%; /* 테이블 전체 너비를 화면 가득 채우기 */
+    margin: 0 auto; /* 가운데 정렬 */
+    padding: 20px 0; /* 상하 여백 */
+    color: white;
+    border-collapse: collapse; /* 셀 간의 간격 제거 */
+    border-spacing: 0; /* 셀 사이의 틈 없애기 */
+    padding-top: 100px;
+}
+
+.table1 td:nth-child(odd) {
+    width: 15%; /* 홀수 칸 넓이 */
+}
+
+/* 짝수 칸 (두 번째, 네 번째 등) 넓이 설정 */
+.table1 td:nth-child(odd) {
+    font-weight: bold;
 }
 
 .name-common {
@@ -112,7 +279,7 @@ body {
 .krname {
     font-family: "SUIT";
     font-size: 360%; /* 텍스트 크기 */
-    margin-top: 150px; /* 위간격만 적용 */
+    margin-top: 100px; /* 위간격만 적용 */
     line-height: 0;
 }
 

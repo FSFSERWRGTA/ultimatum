@@ -23,18 +23,7 @@
 	src: url(../woff2/SIMPLECANDY.woff) format("woff");
 }
 
-.title {    
-    font-family: "MOLIKA";
-    position: absolute;
-    top: 85%; /* 부모 요소의 50% 위치 */
-    left: 50%;
-    transform: translate(-50%, -50%); /* 중앙 정렬 */
-    z-index: 2;
-    color: white; /* 텍스트 색상 */
-    font-size: 20px; /* 텍스트 크기 */
-    font-weight: bold; /* 텍스트 두께 */
-    text-align: center; /* 텍스트 중앙 정렬 */
-}
+
 
 body {
     margin: 0;
@@ -46,9 +35,6 @@ body {
     background-attachment: fixed; /* 스크롤에도 배경 고정 */
     height: 100vh; /* 화면 전체 높이를 차지 */
 }
-
-
-
 
 .thing{
     padding-top: 80px;
@@ -102,7 +88,7 @@ body {
     justify-content: center; /* 아이콘들 사이의 간격을 중앙 정렬 */
     align-items: center; /* 세로 가운데 정렬 */
     padding-top: 10px;
-    padding-left: 5%;
+    padding-left: 4%;
     text-decoration: none;
     z-index: 1000; /* 다른 요소 위에 표시되도록 z-index 설정 */
 
@@ -118,7 +104,7 @@ main {
     align-items: center; /* 가로 가운데 정렬 */
     margin: 0 auto; /* 좌우 가운데 정렬 */
     width: 40%; /* 너비 설정 */
-    padding-left: 5.5%;
+    padding-left: 4.9%;
 
     transform: translateY(10px);
     width: 50%; /* 너비 설정 */
@@ -134,19 +120,6 @@ main {
     scrollbar-width: none; /* Firefox에서 스크롤바 숨기기 */
 }
 
-.star1{
-    padding: 30px;
-}
-
-.star2{
-    padding:30px;
-}
-.star3{
-    padding:30px;
-}
-.star4{
-    padding:30px;
-}
 
 /* 세 박스를 감싸고 있음 */
 .main-bar__icon-box {
@@ -248,7 +221,7 @@ main {
     flex-direction: column; /* 세로로 나열 */
     justify-content: center; /* 세로 중앙 정렬 */
     text-align: center; /* 텍스트 가운데 정렬 */
-    padding-top: 100px;
+    padding-top: 50px;
 }
 
 .side-bar2 img {

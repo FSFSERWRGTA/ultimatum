@@ -131,7 +131,7 @@ main {
 }
 
 .WARNINGI img {
-    width: 10%; /* 너비를 절반으로 줄임 */
+    width: 30%; /* 너비를 절반으로 줄임 */
     height: auto; /* 비율 유지 */
 }
 

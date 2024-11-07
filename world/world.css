@@ -46,13 +46,12 @@ body {
     color:white;
     font-size:40px;
     padding-top: 7px;
-    width:120px;
 }
-.main-bar__icon-box {
+.main-bar__icon-box10 {
     display: flex;
     justify-content: space-between; /* 아이콘들 사이의 간격을 균등하게 배치 */
     align-items: center; /* 세로 가운데 정렬 */
-    width: 80%;
+    width: 70%;
     padding-top: 27px;
 }
 
@@ -65,14 +64,15 @@ body {
 
 .rectangle-icon2 {
     padding-top: 70px;
-    width: 200px; /* 아이콘2의 너비 */
-    height: 50px; /* 아이콘2의 높이 */
+    width: auto; /* 아이콘2의 너비 */
+    height: 40%; /* 아이콘2의 높이 */
     margin: 0 20px;
 }
 
 .rectangle-icon3 {
-    width: 300px; /* 아이콘3의 너비 */
+    width: auto; /* 아이콘3의 너비 */
     height: 130px; /* 아이콘3의 높이 */
+    padding-left: 5px;
 }
 
 .rectangle-icon2 img, .rectangle-icon3 img {
@@ -91,7 +91,6 @@ body {
     z-index: 1000; /* 다른 요소 위에 표시되도록 z-index 설정 */
 
 }
-
 
 /*멤버란*/
 main {

@@ -10,6 +10,12 @@
 	font-display: swap;
 	src: local('Pretendard Black'), url(../woff2/Pretendard-Black.woff2) format('woff2'), url(./woff/Pretendard-Black.woff) format('woff');
 }
+@font-face {
+	font-family: 'SIMPLECANDY';
+	font-weight: 900;
+	font-display: swap;
+	src: url(../woff2/SIMPLECANDY.woff) format("woff");
+}
 body {
     margin: 0;
     padding: 0;
@@ -25,18 +31,62 @@ body {
     padding-top: 80px;
 }
 
+.imtext7 {    
+    font-family: "SIMPLECANDY";
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    z-index:1;
+    color:white;
+    font-size:40px;
+    padding-top: 7px;
+}
+.main-bar__icon-box10 {
+    display: flex;
+    justify-content: space-between; /* 아이콘들 사이의 간격을 균등하게 배치 */
+    align-items: center; /* 세로 가운데 정렬 */
+    width: 70%;
+    padding-top: 27px;
+}
+
+.rectangle-icon2, .rectangle-icon3 {
+    display: flex;
+    align-items: center; /* 세로 중앙 정렬 */
+    justify-content: center; /* 가로 중앙 정렬 */
+    /* 요소 간격 조정을 위한 패딩/마진을 최소화 */
+}
+
+.rectangle-icon2 {
+    padding-top: 70px;
+    width: auto; /* 아이콘2의 너비 */
+    height: 40%; /* 아이콘2의 높이 */
+    margin: 0 20px;
+}
+
+.rectangle-icon3 {
+    width: auto; /* 아이콘3의 너비 */
+    height: 130px; /* 아이콘3의 높이 */
+    padding-left: 5px;
+}
+
+.rectangle-icon2 img, .rectangle-icon3 img {
+    max-width: 100%; /* 이미지가 상자의 너비를 넘지 않도록 설정 */
+    max-height: 100%; /* 이미지가 상자의 높이를 넘지 않도록 설정 */
+    object-fit: contain; /* 이미지가 상자 내에 비율을 유지하며 맞추어짐 */
+   }
+
 .head {
+    font-family: "MOLIKA";
     display: flex; /* 플렉스 박스 사용 */
     justify-content: center; /* 아이콘들 사이의 간격을 중앙 정렬 */
     align-items: center; /* 세로 가운데 정렬 */
-    gap: 70px; /* 아이콘 간의 간격 조정 (필요시) */
-    padding-top: 50px;
-    padding-left: 2.5%;
+    padding-top: 10px;
+    text-decoration: none;
+    z-index: 1000; /* 다른 요소 위에 표시되도록 z-index 설정 */
+
 }
 
-.head img {
-    max-width: 80%; /* 이미지 너비 조정 */
-}
+
 
 /*사각형 세 개 있는 구역 */
 main {

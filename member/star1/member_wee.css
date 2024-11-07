@@ -87,14 +87,21 @@ body {
     width: 100%;
     margin: 0; /* 여백 없애기 */
 }
+.main_t{
+    width:100%;
+    border-collapse: collapse; /* 셀 간의 간격 제거 */
+    border-spacing: 0;
+}
+.main_t td{
+    width: 50%
+}
 .full {
-    width: 50%; /* 너비 설정 */
+    width: 100%; /* 너비 설정 */
     height: auto; /* 높이 자동 */
     max-height: 100vh; /* 최대 높이를 화면 높이에 맞추기 */
     object-fit: cover; /* 비율 유지하면서 오버플로우된 부분 자르기 */
     object-position: top; /* 이미지가 위쪽부터 시작 */
     position: sticky;
-    padding-left: 50%;
     top: 0; /* 위쪽에 고정 */
     right: 0; /* 오른쪽에 고정 */
     left: auto; /* 왼쪽 간섭 방지 */
@@ -105,6 +112,8 @@ body {
 }
 
 .skin {
+    top: 0; /* 위쪽에 붙이기 */
+    right: 0;
     position: relative;
     width: 100%; /* 최대 너비 100%로 설정하여 화면 너비에 맞추기 */
     height: auto; /* 높이 자동 */
@@ -125,7 +134,6 @@ body {
     margin: 20px;
 }
 
-
 .left {
     position: absolute; /* 부모 요소에 대해 절대 위치 설정 */
     width: auto; /* 너비 자동 설정 */
@@ -140,32 +148,33 @@ body {
 }
 .square01 {
     z-index: 10;
-    width: 50%; /* 너비를 50%로 설정 */
+    width: 100%; /* 너비를 50%로 설정 */
     height: 100vh; /* 화면 전체 높이를 차지 */
     background-color: #333435;
     background: linear-gradient(#333435, black);
     overflow: auto; /* 스크롤 기능 활성화 */
-    padding: 20px; /* 텍스트와 경계 사이의 여백 추가 */
     z-index: 2;
 }
 
+/* 상해가능정도 */
+
 .thro {
-    top:100px;
+    top:150px;
     position: relative; /* 부모 요소를 상대적으로 설정 */
-    width: 80%; /* 너비 설정 */
-    height: 110px; /* 높이 자동 */
+    width: 100%; /* 너비 설정 */
+    height: 170px; /* 높이 자동 */
+    overflow: hidden;
     margin: 0 auto; /* 부모 요소를 가운데 정렬 */
     background-color: #9AACC3;
 
 }
 .thro h1 {
     font-family: 'MOLIKA'; /* 글꼴 설정 */
-    font-size: 60px; /* 글꼴 크기 설정 */
-    padding-top: 25px;
+    font-size: 55px; /* 글꼴 크기 설정 */
+    padding-top: 17px;
     padding-left: 40px;
     color: white;
-
-    }
+}
 .thro img {
     position: absolute; /* 부모 요소에 대해 절대 위치 설정 */
     top: 50%; /* 세로 중앙 정렬 */
@@ -187,73 +196,128 @@ body {
 
 /* background-color: #333435;  */
 
-
-/* 테이블 설정 */
-table {
-    table-layout: fixed; /* 모든 열을 동일한 너비로 설정 */
-    border-collapse: collapse; /* 테두리 겹치지 않도록 */
-}
-table td {
-    padding: 10px 10px;
-    color: white; /* 기본 텍스트 색상 */
-    border: 2px solid white; /* 기본 행 경계선 */
-    text-align: justify;
-    text-align: center;
-}
-table th {
-    font-size: 18px;
-    padding: 10px 0;
-    color: white; /* 기본 텍스트 색상 */
-    border: 2px solid white; /* 기본 행 경계선 */
-    text-align: center;
-    font-weight: bold;
-}
-
 .table {
     font-family: 'Pretendard';
     font-size: 13px;
     width: 80%; /* 테이블 전체 너비를 화면 가득 채우기 */
     margin: 0 auto; /* 가운데 정렬 */
-    padding: 20px 0; /* 상하 여백 */
     color: white;
     border-collapse: collapse; /* 셀 간의 간격 제거 */
     border-spacing: 0; /* 셀 사이의 틈 없애기 */
-    padding-top: 200px;
-    
-    
 }
-.table th:nth-child(odd),
-.table td:nth-child(odd) {
-    width: 10%; /* 홀수 칸 넓이 */
+
+/* 테이블 셀 기본 스타일 */
+.table td, .table th {
+    color: white; /* 기본 텍스트 색상 */
+    text-align: justify;
     text-align: center;
+ /* 각 셀의 하단에 경계선 추가 */
+}
+/* .colspan-cell에 대한 추가 스타일 */
+.table .colspan-cell {
+    padding: 13px 0px;
+    text-align: justify;
 }
 
-/* 짝수 칸 (두 번째, 네 번째 등) 넓이 설정 */
-.table th:nth-child(even),
-.table td:nth-child(even) {
-    width: 40%; /* 짝수 칸 넓이 */
+/* .bottom tr에만 적용될 추가 스타일 */
+.table .bottom td, .table .bottom th {
+    border-bottom: 2px solid white; /* 하단 경계선만 적용 */
+}
+.flex-container {
+    display: flex; /* 플렉스박스를 사용하여 가로로 배치 */
+    align-items: center; /* 세로 중앙 정렬 */
+    justify-content: flex-start; /* 텍스트는 이미지 오른쪽에 배치 */
+    font-size: 16px;
+}
+.custom-hr {
+    border: none; /* 기본 경계 제거 */
+    border-top: 2px solid white; /* 원하는 두께와 색상으로 상단 경계선 추가 */
+    margin: 0; /* 위아래 여백 */
+    padding-bottom: 5px;
+    width: 100%; /* 선 너비 조절 */
+}
+.custom-hr2 {
+    border: none; /* 기본 경계 제거 */
+    border-top: 2px solid white; /* 원하는 두께와 색상으로 상단 경계선 추가 */
+    margin: 0; /* 위아래 여백 */
+    margin-top: 20px;
+    padding-bottom: 5px;
+    width: 100%; /* 선 너비 조절 */
 }
 
-.table1 {
-    font-size: 13px;
-    width: 80%; /* 테이블 전체 너비를 화면 가득 채우기 */
-    margin: 0 auto; /* 가운데 정렬 */
-    padding: 20px 0; /* 상하 여백 */
-    color: white;
-    border-collapse: collapse; /* 셀 간의 간격 제거 */
-    border-spacing: 0; /* 셀 사이의 틈 없애기 */
-    padding-top: 100px;
-}
-
-.table1 td:nth-child(odd) {
-    width: 15%; /* 홀수 칸 넓이 */
-}
-
-/* 짝수 칸 (두 번째, 네 번째 등) 넓이 설정 */
-.table1 td:nth-child(odd) {
+.name{
+    padding-left: 10px; 
+    padding-bottom: 10px;
+    font-size: 30px;
     font-weight: bold;
 }
+.circle {
+    width: 100px;   /* 원의 너비 */
+    height: 30px;  /* 원의 높이 */
+    color: white;   /* 텍스트 색상 */
+    border-radius: 12px; /* 원 모양 */
+    display: flex;
+    justify-content: center;  /* 수평 중앙 정렬 */
+    align-items: center;  /* 수직 중앙 정렬 */
+    text-align: center;  /* 텍스트 중앙 정렬 */
+    font-weight: bold;  /* 텍스트 굵게 */
+    margin: 0 auto;  /* 중앙 정렬 */
+    border: 1px solid white;
+}
+.table1 {
+    font-family: 'Pretendard';
+    font-size: 13px;
+    width: 100%; /* 테이블 전체 너비를 화면 가득 채우기 */
+    margin: 0 auto; /* 가운데 정렬 */
+    color: white;
+    border-collapse: collapse; /* 셀 간의 간격 제거 */
+    border-spacing: 0; /* 셀 사이의 틈 없애기 */
+}
 
+/* 테이블 셀 스타일 */
+.table1 td, .table1 th {
+    color: white;
+    text-align: center;
+    padding: 0; /* 여백 제거 */
+}
+
+/* .colspan-cell의 padding 제거 */
+.table1 .colspan-cell {
+    padding: 0;
+    width: 20%;
+}
+
+/* .circle2 스타일 조정 */
+.circle2 {
+    width: 80px;
+    height: 30px;
+    color: white;
+    border-radius: 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-weight: bold;
+    border: 1px solid white;
+    margin: 3px;
+    margin-left: 20px;
+    padding: 0;
+}
+.circle3 {
+    width: 110px;
+    height: 150px;
+    color: white;
+    border-radius: 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-weight: bold;
+    border: 1px solid white;
+    margin: 5px;
+    margin-left: 20px;
+    padding: 0;
+}
 .name-common {
     display: flex;
     flex-direction: column; /* 세로로 배치 */
@@ -273,35 +337,16 @@ table th {
     line-height: 0;
 }
 
-.krname {
-    font-family: "SUIT";
-    font-size: 360%; /* 텍스트 크기 */
-    margin-top: 100px; /* 위간격만 적용 */
-    line-height: 0;
-}
-
-.enname {
-    font-family: "Pretendard";
-    font-size: 20px; /* 텍스트 크기 */
-    margin-top: 10px; /* 위간격만 적용 */
-}
-
-.info {
-    font-family: 'Chosunilbo_myungjo';
-    font-size: 20px; /* 텍스트 크기 */
-    margin-top: 30px; /* 위간격만 적용 */
-    line-height:70px;
-}
-
 .santence {
-    font-family: "SUIT";
+    font-family: "Pretendard";
     font-size: 30px; /* 텍스트 크기 */
     margin-top: 200px; /* 위간격만 적용 */
     line-height:70px;
+    font-weight: bold;
 }
 
 .look {
-    font-family: 'Chosunilbo_myungjo';
+    font-family: "Pretendard";
     font-size: 15px; /* 텍스트 크기 */
     margin-top: 70px; /* 위간격만 적용 */
     text-align: justify;

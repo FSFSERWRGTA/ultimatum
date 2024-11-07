@@ -82,7 +82,7 @@ body {
     width: 100%;
 }
 .full {
-    position: absolute;
+    position: relative;
     width: 50%; /* 너비 설정 */
     height: auto; /* 높이 자동 */
     max-height: 100vh; /* 최대 높이를 화면 높이에 맞추기 */
@@ -108,7 +108,7 @@ body {
 }
 
 .square {
-    position: absolute; /* 부모 요소에 대해 절대 위치 설정 */
+    position: relative; /* 부모 요소에 대해 절대 위치 설정 */
     top: 0; /* 위쪽에 붙이기 */
     right: 0; /* 오른쪽에 붙이기 */
     z-index: 2; /* 겹쳐서 보이도록 z-index 설정 */

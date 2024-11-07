@@ -118,8 +118,9 @@ main {
     font-size: 13px;
     width: 100%; /* 테이블 전체 너비를 화면 가득 채우기 */
     margin: 0 auto; /* 가운데 정렬 */
-    padding: 20px 0; /* 상하 여백 */
+    padding: 20px; /* 상하 여백 */
     color: white;
+    table-layout: fixed;
     text-align: center;
     border-collapse: collapse; /* 셀 간의 간격 제거 */
     border-spacing: 0; /* 셀 사이의 틈 없애기 */
@@ -153,14 +154,6 @@ main {
     border-top: 3px solid white; /* 기본 행 경계선 */
 }
 
-
-
-
-
-/* 테이블 하단 맞추기 */
-.table table {
-    margin-top: 100px; /* 상단 여백 추가로 헤더와 겹침 방지 */
-}
 
 .table2 {
     font-family: 'Pretendard';

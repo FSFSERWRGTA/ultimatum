@@ -1,9 +1,14 @@
-
 @font-face {
 	font-family: 'Pretendard';
 	font-weight: 900;
 	font-display: swap;
 	src: local('Pretendard Light'), url(../../woff2/Pretendard-Light.woff2) format('woff2'), url(../../woff2/Pretendard-Light.woff) format('woff');
+}
+@font-face {
+	font-family: 'Pretendard-Bold';
+	font-weight: 900;
+	font-display: swap;
+	src: local('Pretendard-Bold'), url(../../woff2/Pretendard-Bold.woff2) format('woff2'), url(../../woff2/Pretendard-Bold.woff) format('woff');
 }
 
 @font-face {
@@ -280,7 +285,7 @@ main {
 .rectangle-icon h2{
     margin: 0; /* 기본 여백 제거 */
     font-size: 13px !important;
-    font-family: 'Pretendard' !important;
+    font-family: 'Pretendard-Bold';
     font-weight: bold !important; 
     text-align: center !important;
     
@@ -288,7 +293,7 @@ main {
 
 /* 링크 스타일 */
 .rectangle-icon a {
-    font-family: "Pretendard" !important;
+    font-family: 'Pretendard-Bold';
     font-weight: bold !important;
     color: rgb(54, 54, 57); /* 기본 텍스트 색상 */
     text-decoration: none; /* 밑줄 제거 */
@@ -298,12 +303,11 @@ main {
 .rectangle-icon a h2 {
     margin: 0 !important;
     font-size: 13px !important;
-    font-family: 'Pretendard' !important;
-    font-weight: bold !important; /* 굵기 명시적으로 설정 */
+    font-family: 'Pretendard-Bold';
+    font-weight: bold !important;
     text-align: center !important;
-    color: rgb(54, 54, 57) !important;
+    color: rgb(54, 54, 57) !important; /* 텍스트 색상 */
 }
-
 
 
 /* 마우스 오버 시 배경과 텍스트 색상 변경 */

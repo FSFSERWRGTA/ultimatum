@@ -23,7 +23,10 @@
                 <a href="../system/system.html"><div class="rectangle-icon2" style="margin-left: 0;"><div class="imtext7">SYSTEM</div></div></a>
             </div>
             <div class="main-bar__icon-box2">
+                <!--
                 <a href="../member/member.html"><div class="rectangle-icon2"><div class="imtext7">MEMBER</div></div></a>
+                -->
+                <a href="#"><div class="rectangle-icon2"><div class="imtext7">MEMBER</div></div></a>
             </div>
         </section>
     </div>
@@ -45,7 +48,7 @@
             </div>
             
             <div class="main-bar__icon-box2">
-                <a href="https://docs.google.com/spreadsheets/d/1Vhg-G4a3C9wMmCpxiA0PHYAuRRWyY0q34vcWjtcFH7g/edit?gid=1258932284#gid=1258932284">
+                <a href="https://docs.google.com/spreadsheets/d/1Vhg-G4a3C9wMmCpxiA0PHYAuRRWyY0q34vcWjtcFH7g/edit?gid=1258932284#gid=1258932284" target="_blank">
                     <div class="rectangle-icon">
                         <span class="imtext3">스킬 리스트</span>
                         <span class="imtext4"> SKILL LIST</span>
@@ -58,22 +61,43 @@
             </div>
             
             <div class="main-bar__icon-box2">
+                
                 <a href="#">
-                    <div class="rectangle-icon">
-                        <span class="imtext3">상점</span>
-                        <span class="imtext4"> STORE</span>
-                        <span class="imtext">상점</span>
-                        <span class="imtext2"> STORE</span>
-                        <div class="gradient-overlay"></div>
-                        <img src="..\img\system\상점.png">
+                    <div class="main-bar__icon-box2" onclick="openPopup2()">
+                        <div class="rectangle-icon">
+                            <span class="imtext3">상점</span>
+                            <span class="imtext4"> STORE</span>
+                            <span class="imtext">상점</span>
+                            <span class="imtext2"> STORE</span>
+                            <div class="gradient-overlay"></div>
+                            <img src="..\img\system\상점.png">
+                        </div>
                     </div>
+                    
                 </a>
+            </div>
+            <div id="popupOverlay2" class="popup-overlay" onclick="closePopup2()">
+                <div class="popup-content" style="width: 30%;">
+                    <span class="close-btn" onclick="closePopup2()">&times;</span>
+                    <img src="../img/main/KakaoTalk_20241108_011542925.png" alt="권한없음" class="popup-image">
+                </div>
             </div>
         </section>
         
         
 
     </main>
+
+    <script>
+        function openPopup2() {
+            document.getElementById("popupOverlay2").style.display = "flex";
+        }
+
+        // 팝업 닫기
+        function closePopup2() {
+            document.getElementById("popupOverlay2").style.display = "none";
+        }
+    </script>
 
 </body>
 </html>

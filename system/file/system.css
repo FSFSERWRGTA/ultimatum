@@ -217,7 +217,7 @@ main {
 .check {
     font-family: 'SUIT';
     font-size: 13px; /* 텍스트 크기 */
-    color: white;
+    color: #d9dfe9;
     line-height: 30px;
     text-align: justify;
     margin-bottom: 1px; /* 요소 사이 간격을 줄이기 위해 여백 설정 */
@@ -279,17 +279,32 @@ main {
 /* 텍스트 스타일 */
 .rectangle-icon h2{
     margin: 0; /* 기본 여백 제거 */
-    font-size: 13px;
-    text-align: center;
+    font-size: 13px !important;
+    font-family: 'Pretendard' !important;
+    font-weight: bold !important; 
+    text-align: center !important;
+    
 }
 
 /* 링크 스타일 */
 .rectangle-icon a {
-    font-family: "Pretendard";
+    font-family: "Pretendard" !important;
+    font-weight: bold !important;
     color: rgb(54, 54, 57); /* 기본 텍스트 색상 */
     text-decoration: none; /* 밑줄 제거 */
     transition: color 0.3s ease; /* 텍스트 색상 전환 효과 */
 }
+
+.rectangle-icon a h2 {
+    margin: 0 !important;
+    font-size: 13px !important;
+    font-family: 'Pretendard' !important;
+    font-weight: bold !important; /* 굵기 명시적으로 설정 */
+    text-align: center !important;
+    color: rgb(54, 54, 57) !important;
+}
+
+
 
 /* 마우스 오버 시 배경과 텍스트 색상 변경 */
 .rectangle-icon:hover {

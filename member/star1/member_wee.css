@@ -40,6 +40,7 @@ body {
     background-attachment: fixed; /* 스크롤에도 배경 고정 */
     height: 100vh; /* 화면 전체 높이를 차지 */
     overflow-y: hidden;
+    color: white;
 }
 
 /* 스크롤바의 폭 너비 */
@@ -319,15 +320,6 @@ body {
     margin-left: 20px;
     padding: 0;
 }
-.name-common {
-    display: flex;
-    flex-direction: column; /* 세로로 배치 */
-    align-items: center; /* 가운데 정렬 */
-    overflow: auto; 
-    margin-left: 90px;
-    margin-right: 90px;
-    color: white;
-}
 
 /* 각 텍스트에 대한 스타일 */
 
@@ -341,31 +333,49 @@ body {
 .santence {
     font-family: "Pretendard";
     font-size: 30px; /* 텍스트 크기 */
-    margin-top: 200px; /* 위간격만 적용 */
+    margin-top: 100px; /* 위간격만 적용 */
+    padding-bottom: 100px;
     line-height:70px;
     font-weight: bold;
 }
-
-.look {
+.thing {
+    display: flex;
+    flex-direction: column; /* 세로 정렬 */
+    align-items: center; /* 수평 중앙 정렬 */
+    justify-content: center; /* 수직 중앙 정렬 */
+    width: 80%;
+    margin: 0 auto; /* 수평 중앙 배치 */
+    text-align: center; /* 텍스트 중앙 정렬 */
+}
+.category {
     font-family: "Pretendard";
-    font-size: 15px; /* 텍스트 크기 */
-    margin-top: 70px; /* 위간격만 적용 */
-    text-align: justify;
+    font-size: 20px; /* 텍스트 크기 */
+    padding-top: 60px; /* 위간격만 적용 */
+    font-weight: bold;
+    text-align: center;
     line-height: 30px;
 }
 
-.personality{
-    font-family: 'Chosunilbo_myungjo';
+.detail{
+    font-family: 'Pretendard';
     font-size: 15px; /* 텍스트 크기 */
     line-height: 30px;
-    margin-top: 70px; /* 위간격만 적용 */
+    margin-top: 40px; /* 위간격만 적용 */
     text-align: justify;
+}
+.keyword{
+    font-family: 'Pretendard';
+    font-size: 18px; /* 텍스트 크기 */
+    line-height: 30px;
+    margin-top: 20px; /* 위간격만 적용 */
+    text-align: center;
 }
 
 .ect{
-    font-family: 'Chosunilbo_myungjo';
+    font-family: 'Pretendard';
+    color: #9AACC3;
     font-size: 15px; /* 텍스트 크기 */
     line-height: 30px;
-    margin-top: 70px; /* 위간격만 적용 */
-    text-align: justify;
+    margin-top: 20px; /* 위간격만 적용 */
+    text-align: center;
 }

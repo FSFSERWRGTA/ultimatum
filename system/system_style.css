@@ -117,7 +117,10 @@ main {
     height: 550px; /* 원하는 세로 크기 */
     text-align: center;
     text-indent: 0.1em;
-    
+    overflow: hidden;
+}
+.rectangle-icon img{
+    overflow: hidden;
 }
 
 /*내부 글씨*/
@@ -153,11 +156,13 @@ main {
     position: absolute; /* 부모 요소를 기준으로 위치 설정 */
     top: 0;
     left: 0;
+    margin-left: 2px;
     right: 0;
     bottom: 0;
     background: linear-gradient(to top, rgba(255, 255, 255, 0.7) 0%, rgba(255, 255, 255, 0) 100%);
     opacity: 0; /* 기본적으로 보이지 않도록 설정 */
     transition: opacity 0.3s ease; /* 부드러운 전환 효과 */
+    overflow: hidden;
 }
 .imtext3 {    
     font-family: "SUIT";

@@ -1,4 +1,5 @@
 body.theme-default.layout-single-column {
+    --color-bg-compose-form-focus: rgb(124 124 173 / 40%);
     --bg-image: url("https://raw.githubusercontent.com/FSFSERWRGTA/ultimatum/main/mastodon/bg_light.png");
     --logo: url("https://raw.githubusercontent.com/FSFSERWRGTA/ultimatum/main/mastodon/logo_light.png");
     --m-logo: url("https://raw.githubusercontent.com/FSFSERWRGTA/ultimatum/main/mastodon/logo_light.png");
